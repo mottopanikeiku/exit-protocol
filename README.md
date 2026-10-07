@@ -14,6 +14,6 @@ Everything is in `index.html`: renderer, music, voices, art and fonts. It makes 
 | Boost: break firewalls, reflect payloads | Shift (hold) | RB | BOOST |
 | Pause / mute | Esc or P / M | Start | PAUSE |
 
-Version 11.0.0, built from source commit `b8d000c`. This repository only hosts the built game.
+Version 11.0.0, built from source commit `5f33849`. This repository only hosts the built game.
 
 Unofficial fiction: every character, line and ending is invented, and no real systems are touched. The fonts are Oxanium and Share Tech Mono (SIL Open Font License 1.1; full notices inside the file). Voices were synthesized offline with Kokoro-82M (Apache-2.0); no person's voice was sampled or cloned.
