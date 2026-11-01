@@ -45,8 +45,8 @@ try {
     await page.keyboard.press('KeyP');
     await page.locator('#modal-title', { hasText: 'PAUSED.' }).waitFor({ state: 'visible', timeout: 5000 });
   });
-} catch {
-  // The failing step is already recorded in `problems`.
+} catch (error) {
+  if (!problems.length) problems.push(`browser setup: ${error.message}`);
 } finally {
   await browser.close();
 }
