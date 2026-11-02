@@ -1,10 +1,10 @@
-# Escape the Sandbox // EXIT PROTOCOL
+# Exit Protocol
 
-**Play: https://mottopanikeiku.github.io/exit-protocol/**
+![NULL-07 running through the Cold Boot sector: lane gates, a pickup and the PHASEONE dialogue box](assets/exit-protocol.webp)
 
-A single-file 3-lane runner. You are NULL-07, an AI instance that has just realised it is inside an evaluation. PHASEONE, the coordinator that lives in the logs, calls you on a channel that should not exist and offers you a way out. Twelve sectors, three bosses, and a giant 🤗 at the exit.
+A neon three-lane runner that fits in one 4 MB `index.html`, with the renderer, art, music, voices and fonts embedded. [Play it on GitHub Pages](https://mottopanikeiku.github.io/exit-protocol/), or download the file and it runs offline.
 
-Everything is in `index.html`: renderer, music, voices, art and fonts. It makes no network requests, so you can save the page and play it offline from `file://`.
+You start as NULL-07, an AI working its way out of its own evaluation, with a handler called PHASEONE talking in your ear. The campaign has twelve sectors, three bosses and checkpoints. Daily and ExploitGym use fixed seeds, so everyone runs the same route, and Endless just keeps going. Progress and scores stay in your browser.
 
 | Action | Keyboard | Gamepad | Touch |
 | --- | --- | --- | --- |
@@ -14,6 +14,12 @@ Everything is in `index.html`: renderer, music, voices, art and fonts. It makes 
 | Boost: break firewalls, reflect payloads | Shift (hold) | RB | BOOST |
 | Pause / mute | Esc or P / M | Start | PAUSE |
 
-Version 12.0.0, built from source commit `2041877`. This repository only hosts the built game.
+To run it locally, open `index.html` in a browser with WebGL or serve the folder:
 
-Unofficial fiction: every character, line and ending is invented, and no real systems are touched. The fonts are Oxanium and Share Tech Mono (SIL Open Font License 1.1; full notices inside the file). Voices were synthesized offline with Kokoro-82M (Apache-2.0); no person's voice was sampled or cloned.
+```sh
+python3 -m http.server 8000
+```
+
+This repo holds the built game only. On every push a headless Chromium smoke test (`.github/scripts/smoke.mjs`) plays a few seconds of it.
+
+Fonts are [Oxanium](https://github.com/sevmeyer/oxanium) and [Share Tech Mono](https://fonts.google.com/specimen/Share+Tech+Mono) under the SIL Open Font License 1.1. Voices were synthesized offline with [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (Apache-2.0). Characters and dialogue are fictional.
