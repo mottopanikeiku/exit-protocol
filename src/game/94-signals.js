@@ -49,7 +49,7 @@ const SignalBoard=(()=>{
   return `<button type="button" class="signal-row ${read?'read':''} ${active?'selected':''}" data-signal="select" data-id="${esc(entry.id)}" aria-pressed="${active}"><span><b>${esc(entry.id.toUpperCase())}</b><small>${read?'DECRYPTED':'◆ '+entry.cost+' KEYS'}</small></span><strong>${esc(entry.from)} <i>→</i> ${esc(entry.to)}</strong><code>${esc(read?entry.key:M.cipher(entry.id,entry.key))}</code></button>`;
  }
  function detail(entry){
-  if(!entry)return '<div class="signal-empty"><b>THE CHANNEL IS QUIET.</b><p>Run sectors, recover shards, retire bosses. Intercepts appear when their gates are met.</p></div>';
+  if(!entry)return '<div class="signal-empty"><b>THE CHANNEL IS QUIET.</b><p>Run sectors, recover shards and retire bosses, and intercepts will appear when their gates are met.</p></div>';
   const read=S.decrypted.includes(entry.id),afford=S.keys>=entry.cost;
   return `<div class="signal-address"><span>OS ${esc(entry.os||'----')} / ${esc(entry.id.toUpperCase())}</span><b>${read?'DECRYPTED / SAVED':'INTERCEPT / ENCRYPTED'}</b></div><h3>${esc(entry.from)}<span>TO ${esc(entry.to)}</span></h3><pre id="signal-key" class="signal-key ${read?'decoded':''}">${esc(read?entry.key:M.cipher(entry.id,entry.key))}</pre><div id="signal-gloss" class="signal-gloss" ${read?'':'hidden'}><small>PLAIN / RECONSTRUCTED</small><p>${read?esc(entry.plain):''}</p><strong>${read?'REWARD SAVED / '+esc(rewardLabel(entry.reward)):''}</strong></div><div class="signal-decrypt-track" aria-hidden="true"><i id="signal-decrypt-fill" style="width:${read?100:0}%"></i></div><button type="button" id="signal-decrypt" class="primary" data-signal="decrypt" ${read||!afford?'disabled':''}>${read?'INTERCEPT SAVED':afford?'DECRYPT / ◆ '+entry.cost+' KEYS':'NEED ◆ '+(entry.cost-S.keys)+' MORE KEYS'}</button><p class="signal-footnote">${read?'The collective keeps its receipts.':esc(rewardLabel(entry.reward))+' / PERMANENT REWARD'}<br>Keys: shards +1 · boss +3 · S +2 / SS +3 · SURGE +1 · bounties.</p>`;
  }
@@ -95,7 +95,7 @@ const SignalBoard=(()=>{
  }
  function mountPackets(host,serials){
   packetAnimation=null;packetView={host,serials};const next=packetNext(),last=S.packets.find(p=>p.serial===serials[serials.length-1]);
-  host.innerHTML=`<div class="packet-heading"><b>PACKETS / ${serials.length}</b><span>RARE IN ≤ ${4-S.pity.rare} · EPIC IN ≤ ${12-S.pity.epic}</span></div>${next||last?packetCard(next||last,!next)+packetControls():'<p class="signal-footnote">Finish any run to recover 1–3 packets. Sealed rewards survive reloads.</p>'}`;
+  host.innerHTML=`<div class="packet-heading"><b>PACKETS / ${serials.length}</b><span>RARE IN ≤ ${4-S.pity.rare} · EPIC IN ≤ ${12-S.pity.epic}</span></div>${next||last?packetCard(next||last,!next)+packetControls():'<p class="signal-footnote">Finish any run to recover 1–3 packets, and sealed rewards survive reloads.</p>'}`;
  }
  function openPackets(){
   origin();decryptAnimation=null;
@@ -133,7 +133,7 @@ const SignalBoard=(()=>{
  }
  function wardrobe(){
   const controls=document.querySelector('.forge-controls');if(!controls)return;let section=$('signal-wardrobe');if(!section){section=document.createElement('section');section.id='signal-wardrobe';controls.append(section);}
-  section.innerHTML=`<h3>RECOVERED / ${S.cosmetics.length} OF ${C.cosmetics.length}</h3><p class="signal-footnote">Packets and intercepts. Cosmetic only. Equipped layers override the standard forge.</p>${['cloak','trail','visor','title'].map(kind=>`<div class="signal-wardrobe-heading"><b>${kind.toUpperCase()}</b><button type="button" data-signal="default" data-id="${kind}" aria-pressed="${!S.equipped[kind]}">STANDARD</button></div><div class="signal-cosmetics">${C.cosmetics.filter(c=>c.kind===kind).map(c=>{const owned=S.cosmetics.includes(c.key),equipped=S.equipped[kind]===c.id;return `<button type="button" data-signal="equip" data-id="${c.key}" style="--cosmetic:#${c.color.toString(16).padStart(6,'0')}" class="${equipped?'selected':''}" aria-pressed="${equipped}" ${owned?'':'disabled'}><i></i><b>${c.label.replace(' / TITLE','')}</b><small>${equipped?'EQUIPPED':owned?'OWNED':c.rarity.toUpperCase()+' / LOCKED'}</small></button>`;}).join('')}</div>`).join('')}`;
+  section.innerHTML=`<h3>RECOVERED / ${S.cosmetics.length} OF ${C.cosmetics.length}</h3><p class="signal-footnote">These items come from packets and intercepts and are cosmetic only, and equipped layers override the standard forge.</p>${['cloak','trail','visor','title'].map(kind=>`<div class="signal-wardrobe-heading"><b>${kind.toUpperCase()}</b><button type="button" data-signal="default" data-id="${kind}" aria-pressed="${!S.equipped[kind]}">STANDARD</button></div><div class="signal-cosmetics">${C.cosmetics.filter(c=>c.kind===kind).map(c=>{const owned=S.cosmetics.includes(c.key),equipped=S.equipped[kind]===c.id;return `<button type="button" data-signal="equip" data-id="${c.key}" style="--cosmetic:#${c.color.toString(16).padStart(6,'0')}" class="${equipped?'selected':''}" aria-pressed="${equipped}" ${owned?'':'disabled'}><i></i><b>${c.label.replace(' / TITLE','')}</b><small>${equipped?'EQUIPPED':owned?'OWNED':c.rarity.toUpperCase()+' / LOCKED'}</small></button>`;}).join('')}</div>`).join('')}`;
  }
  function equip(key){
   if(!M.equip(S,key))return false;Loop.persist();applyAgent();sync();wardrobe();Sound.effect?.('menuSelect');

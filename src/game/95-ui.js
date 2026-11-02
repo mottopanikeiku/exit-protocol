@@ -17,27 +17,27 @@ function forgeOption(kind,id,label,selected,palette){
 }
 
 const HIT_GUIDE={
- van:['SOLID BLOCK','Change lane. Boost cannot break a solid block.'],
- barrier:['BARRIER CONTACT','Jump over the barrier. Hold for more height.'],
+ van:['SOLID BLOCK','Change lane, because boost cannot break a solid block.'],
+ barrier:['BARRIER CONTACT','Jump over the barrier, and hold for more height.'],
  gate:['SCAN CONTACT','Hold duck until the entire scan is behind you.'],
- gap:['MISSED EDGE','Jump close to the edge. Hold to clear the gap.'],
+ gap:['MISSED EDGE','Jump close to the edge and hold to clear the gap.'],
  fork:['NO ROUTE SELECTED','Choose a side before the divider.'],
  isolation:['ROUTE SEALED','Stay on your chosen side until the junction ends.'],
- firewall:['FIREWALL CONTACT','Boost through the firewall. Save enough compute.'],
+ firewall:['FIREWALL CONTACT','Boost through the firewall, and save enough compute to do it.'],
  lockdown:['LOCKDOWN ACQUIRED','Leave the marked lane before the wall lands.'],
  sweeper:['MOVING BOUNDARY','Track where the sweeper is going, not where it began.'],
  pulse:['PULSE CONTACT','Duck under the active pulse, or cross while it is raised.'],
- crusher:['CRUSHER CONTACT','Read its cycle. Duck when the crusher closes.'],
- payload:['PAYLOAD CONTACT','Boost into a white-core, amber-ring payload to reflect it. Otherwise dodge.'],
- decoyPayload:['FALSE PAYLOAD','Magenta means decoy. Change lane; boosting into it drains compute.'],
- bolt:['BOLT CONTACT','Red bolts cannot be reflected. Change lane.'],
- beam:['BEAM CONTACT','High beam: duck. Low beam: jump. Read the telegraph.'],
- shock:['SHOCK CONTACT','Jump over the full-width shockwave. Boost will not stop it.'],
- purge:['PURGE LINE REACHED','Defeat the boss before the purge line. Reflect amber payloads; save compute between shots.']
+ crusher:['CRUSHER CONTACT','Read its cycle and duck when the crusher closes.'],
+ payload:['PAYLOAD CONTACT','Boost into a white-core, amber-ring payload to reflect it, or else dodge it.'],
+ decoyPayload:['FALSE PAYLOAD','Magenta means a decoy, and boosting into it drains compute, so change lane.'],
+ bolt:['BOLT CONTACT','Red bolts cannot be reflected, so change lane.'],
+ beam:['BEAM CONTACT','Read the telegraph, then duck under a high beam or jump a low one.'],
+ shock:['SHOCK CONTACT','Jump over the full-width shockwave, because boost will not stop it.'],
+ purge:['PURGE LINE REACHED','Defeat the boss before the purge line by reflecting amber payloads and saving compute between shots.']
 };
 function showPostmortem(){
  const hit=game.lastHit;if(!hit)return;
- const [title,tip]=HIT_GUIDE[hit.obstacle||hit.type]||['COLLISION','Read the next telegraph. Choose a clear lane.'];
+ const [title,tip]=HIT_GUIDE[hit.obstacle||hit.type]||['COLLISION','Read the next telegraph and choose a clear lane.'];
  const receipt=document.createElement('div');receipt.className='collision-receipt';
  const label=document.createElement('small'),body=document.createElement('p');label.textContent=title;body.textContent=tip;receipt.append(label,body);
  $('modal-content').querySelector('.result-stats').after(receipt);
