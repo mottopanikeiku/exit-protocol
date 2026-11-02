@@ -1,12 +1,12 @@
-// Browser smoke test for the deployed single-file build.
-// Opens index.html from file:// (as the README promises), starts a campaign run,
-// plays a few seconds and pauses. Fails on any script error, console error, or
-// request that leaves the page (the README says the game makes no network requests).
-// Usage: node .github/scripts/smoke.mjs   (needs the `playwright` package and its Chromium)
+// Browser smoke test for the built single-file game.
+// Opens public/index.html from file://, starts a campaign run, plays a few seconds
+// and pauses. Fails on any script error, console error, or request that leaves
+// the page (the game makes no network requests).
+// Usage: npm run build && node .github/scripts/smoke.mjs   (needs the `playwright` package and its Chromium)
 import { chromium } from 'playwright';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-const pageUrl = pathToFileURL(fileURLToPath(new URL('../../index.html', import.meta.url))).href;
+const pageUrl = pathToFileURL(fileURLToPath(new URL('../../public/index.html', import.meta.url))).href;
 const problems = [];
 
 const browser = await chromium.launch({ args: ['--enable-unsafe-swiftshader'] });
