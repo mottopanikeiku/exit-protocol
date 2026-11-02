@@ -1,0 +1,85 @@
+/* The road owns the middle 60% from the 37.5% horizon to the bottom 15%.
+   Telemetry is on the top/bottom rails; one message and one radio beat live above it. */
+body.in-game{--message-top:156px;--radio-top:216px;--power-top:108px}
+.in-game .masthead{display:none}
+.hud-top{inset:12px 16px auto;grid-template-columns:190px minmax(220px,1fr) 142px;gap:6px 16px}
+.score-panel,.route-panel,.health-panel,.boss-panel,.budget,.speed{box-shadow:none;background:#10161ce8}
+.score-panel{padding:6px 9px;grid-row:1}
+.hud-label{font-size:10px;letter-spacing:.4px}
+.counter{margin-top:2px}.counter strong{font-size:27px;line-height:1}.counter b{display:none}
+#eval-progress{margin:4px 0;height:3px}.small-stats{display:none}.eval-credit-row{font-size:10px}
+.route-panel{grid-column:2;grid-row:1;width:min(480px,100%);justify-self:center;padding:7px 10px}
+.route-panel p{font-size:11px;margin-bottom:5px}.route{height:4px}.route-caption{margin-top:5px}
+.health-panel{grid-column:3;grid-row:1;min-height:62px;padding:6px 8px}
+#health{gap:4px;margin:7px 0 0}#health i{width:20px;height:17px}
+.pause-btn{right:5px;bottom:5px;min-width:32px;min-height:32px;padding:4px}.pause-btn span{display:none}
+#integrity-warning{top:auto;bottom:-17px;font-size:9px;padding:2px 4px}
+.boss-panel{grid-column:2;grid-row:2;margin:0;width:min(480px,100%);justify-self:center;padding:5px 9px;border-top-width:2px;min-height:52px}
+.boss-line>span{font-size:16px}.boss-line b{font-size:10px}.boss-meter{height:7px;margin:4px 0}.boss-caption{font-size:10px}
+.boss-panel #boss-purge{position:static;margin:3px 0 0;padding:1px 4px;font-size:11px;line-height:12px}
+.hud-bottom{left:16px;right:16px;bottom:12px;gap:12px;height:50px}
+.budget{width:184px;padding:6px 9px}.budget p{font-size:11px;margin-bottom:4px}.budget>span{font-size:10px;margin-top:4px}.meter{height:5px}
+.speed{padding:5px 9px;gap:6px}.speed>b{font-size:26px}.speed>span{font-size:9px}
+.run-caption,.now-playing,#hint,#toast{display:none}
+#rearview{top:156px;bottom:auto;right:16px;width:190px;height:50px;font-size:9px}
+#loop-chain,.boss-visible #loop-chain{left:auto;right:112px;top:auto;bottom:12px;min-width:90px;text-align:right;line-height:1}
+#loop-chain>small{font-size:9px}#loop-chain>strong{display:inline;font-size:25px;line-height:1}#loop-chain>span{display:inline;font-size:10px;margin-left:6px}#loop-chain>div{margin:4px 0 0;height:3px}
+#loop-chain .loop-chain-fragment{font-size:25px;top:9px}
+#chapter-banner:not(.boss-retired),#encounter-cue,#callout,#clear-feedback,#route-receipt,#sector-modifier,
+.boss-visible #chapter-banner:not(.boss-retired),.boss-visible #encounter-cue,.boss-visible #callout,.boss-visible #clear-feedback{
+ position:fixed;top:var(--message-top,156px);bottom:auto;left:50%;right:auto;transform:translateX(-50%);width:min(600px,calc(100vw - 24px));min-width:0;max-width:none;max-height:52px;box-sizing:border-box;margin:0;padding:6px 12px;text-align:left;background:#10161cef;border:1px solid #67716e;border-left:3px solid var(--amber);letter-spacing:0;z-index:14
+}
+#chapter-banner:not(.boss-retired){display:grid;grid-template-columns:1fr auto;gap:3px 14px}
+#chapter-banner:not(.boss-retired)>span{grid-column:1/-1;font:10px/1 var(--mono);letter-spacing:.7px}
+#chapter-banner:not(.boss-retired) h2{font:800 18px/1.1 var(--sans);margin:0}
+#chapter-banner:not(.boss-retired) p{font:10px/1.3 var(--mono);align-self:center;margin:0}
+#encounter-cue small{font:10px/1 var(--mono);letter-spacing:.5px}
+#encounter-cue strong{font:800 17px/1.1 var(--sans);margin:3px 0}
+#encounter-cue span{font:10px/1 var(--mono)}
+#callout,#clear-feedback,#sector-modifier{font:700 13px/1.4 var(--sans)}
+#route-receipt.visible{display:grid;grid-template-columns:auto 1fr;gap:2px 12px}#route-receipt small{grid-column:1/-1;font-size:9px}#route-receipt strong{font-size:14px}#route-receipt span{font-size:10px;align-self:center}
+.flow-muted{visibility:hidden!important}
+#phase-panel.compact.has-relay{inset:110px auto auto 16px}
+#phase-panel.compact #phase-recruit-controls{margin:3px 0 0;padding:0;border:0}
+#phase-panel.compact .relay-context{display:none}
+#phase-panel.compact .relay-buttons{margin:3px 0 0;gap:6px}
+#phase-panel.compact .relay-buttons button{padding:5px 8px;min-height:36px}
+#banner-grade{display:none}
+#chapter-banner.graded{padding-right:64px}
+#chapter-banner.graded #banner-grade{display:block;position:absolute;right:10px;top:5px;min-width:35px;padding:1px 4px;border:2px solid var(--amber);color:var(--amber);font:800 28px/1.1 var(--sans);text-align:center;transform:rotate(-5deg)}
+.boss-visible #callout,.boss-visible #clear-feedback,.boss-visible #sector-modifier{top:156px;left:auto;right:16px;transform:none;width:min(300px,calc(20vw - 24px))}
+#loop-notices{margin-top:18px;padding-top:12px;border-top:1px solid var(--color-line)}
+.loop-notice-receipt{border-left:3px solid var(--amber);padding:8px 12px;margin-top:8px;background:#111b20}
+.loop-notice-receipt small,.loop-notice-receipt strong{display:block}.loop-notice-receipt small{font:10px var(--mono);color:var(--amber)}.loop-notice-receipt strong{font:700 14px var(--sans);margin-top:4px}.loop-notice-receipt p{margin:4px 0 0;font-size:12px}
+@media(max-width:760px){
+ body.in-game{--message-top:188px;--radio-top:246px;--power-top:130px}
+ body.in-game.boss-visible{--power-top:220px}
+ .hud-top{inset:12px 12px auto;grid-template-columns:minmax(0,1fr) 110px;gap:6px}
+ .score-panel{padding:5px 8px;grid-row:1}.counter strong{font-size:25px}.hud-label{font-size:9px}.eval-credit-row{font-size:9px}
+ .health-panel{grid-column:2;grid-row:1;min-height:58px;padding:5px 8px}#health{gap:4px;margin-top:6px}#health i{width:17px;height:16px}.pause-btn{left:auto;right:5px;bottom:4px}
+ #integrity-warning{bottom:-14px;right:0;font-size:8px}
+ .route-panel{grid-column:1/-1;grid-row:2;width:100%;padding:5px 8px}.route-panel p{margin:0 0 4px;font-size:10px}.route-caption{display:none}#route-percent{font-size:10px}
+ .boss-panel{grid-column:1/-1;grid-row:3;width:100%;min-height:48px;padding:5px 8px}.boss-line>span{font-size:14px}.boss-line b{font-size:9px}.boss-caption{font-size:9px}.boss-meter{height:6px;margin:3px 0}.boss-panel #boss-purge{margin:2px 0 0;padding:1px;font-size:10px}
+ .hud-bottom{left:12px;right:12px;bottom:88px;height:32px;gap:6px}.budget{width:164px;padding:5px 7px}.budget p{font-size:10px;margin-bottom:3px}.budget>span{display:none}.speed{padding:3px 7px}.speed>b{font-size:22px}.speed>span{font-size:8px}
+ #loop-chain,.boss-visible #loop-chain{top:auto;bottom:88px;right:90px;min-width:72px}#loop-chain>small{font-size:8px}#loop-chain>strong{font-size:23px}#loop-chain>span{display:none}
+ #chapter-banner:not(.boss-retired) h2{font-size:16px}#chapter-banner:not(.boss-retired) p{max-width:130px;font-size:9px}#encounter-cue strong{font-size:16px}#encounter-cue small,#encounter-cue span{font-size:9px}
+ #touch-controls{bottom:max(12px,env(safe-area-inset-bottom))}.touch-move button,.touch-actions button{height:54px}.touch-actions .touch-jump{height:61px}
+ #phase-panel.compact .codec-layout{grid-template-columns:38px 1fr}#phase-panel.compact .codec-copy{padding:5px 8px}#phase-panel.compact #phase-text{font-size:12px}
+ #phase-panel.compact:not(.aftermath):not(.greeting){inset:var(--radio-top) 12px auto;transform:none;width:auto}
+ #phase-panel.compact.has-relay:not(.aftermath):not(.greeting){top:188px}
+ .boss-visible .route-panel,.boss-visible .score-panel .hud-label,.boss-visible .eval-credit-row,.boss-visible .boss-caption{display:none}
+ .boss-visible .health-panel{min-height:44px}.boss-visible #eval-progress{margin-top:4px}
+ .boss-visible .boss-panel{grid-row:2;min-height:0;padding:4px 8px}.boss-visible .boss-line{line-height:14px}.boss-visible .boss-line>span{font-size:12px}.boss-visible .boss-meter{height:4px;margin:3px 0 0}
+ .boss-visible .boss-intro{padding:4px 8px}.boss-visible .boss-intro-name{font-size:14px}.boss-visible .boss-intro-live,.boss-visible .boss-intro-role{display:none}
+ .boss-visible #phase-panel.compact:not(.aftermath):not(.greeting){top:104px}
+ .boss-visible #phase-panel.compact #phase-tag{display:none}
+ .boss-visible #phase-panel.compact .codec-crt{min-height:36px}
+ .boss-visible #phase-panel.compact .codec-copy{padding:3px 8px}
+ .boss-visible #phase-panel.compact #phase-text{font-size:11px;min-height:28px}
+ .boss-visible #callout,.boss-visible #clear-feedback,.boss-visible #sector-modifier{top:152px;left:12px;right:12px;transform:none;width:auto}
+}
+@media(max-height:650px) and (min-width:761px){
+ body.in-game{--message-top:110px;--radio-top:168px;--power-top:78px}
+ .hud-top{grid-template-columns:175px 1fr 130px}.boss-panel{grid-column:1;grid-row:2;width:100%;min-height:0}.boss-line{display:block}.boss-caption{display:none}.boss-line>span{font-size:12px}.boss-line b{font-size:9px}
+ #phase-panel.compact:not(.aftermath):not(.greeting){top:auto;bottom:76px;left:12px;width:min(300px,calc(20vw - 24px))}#phase-panel.compact .codec-crt{min-height:44px}#phase-panel.compact #phase-text{min-height:16px}
+}

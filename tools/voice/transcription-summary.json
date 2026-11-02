@@ -1,0 +1,22 @@
+{
+  "model": "base.en",
+  "normalization": "lowercase, punctuation and hyphens removed; digits spelled out; literal contractions",
+  "totals": {
+    "PHASEONE": {
+      "files": 43,
+      "words": 841,
+      "substitutions": 45,
+      "deletions": 6,
+      "insertions": 4,
+      "wer": 0.0654
+    },
+    "instances": {
+      "files": 3,
+      "words": 50,
+      "substitutions": 1,
+      "deletions": 1,
+      "insertions": 1,
+      "wer": 0.06
+    }
+  }
+}

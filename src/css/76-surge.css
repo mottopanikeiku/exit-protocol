@@ -1,0 +1,35 @@
+/* Dedicated top rail: never move the meter into the lane corridor. */
+#surge-hud{position:fixed;z-index:19;left:16px;top:min(94px,calc(35vh - 18px));width:190px;height:16px;display:flex;align-items:center;gap:6px;padding:1px 6px;background:var(--color-panel,#10161ce8);border:1px solid var(--color-line,#67716e);color:var(--color-amber,#ffb347);pointer-events:none;font:10px var(--mono);font-variant-numeric:tabular-nums}
+#surge-hud[hidden],#surge-edge[hidden]{display:none}
+#surge-hud strong{font:700 10px var(--sans);letter-spacing:.6px}
+.surge-meter{height:4px;flex:1;background:#473c31;overflow:hidden}
+.surge-meter i{display:block;height:100%;background:#e6b46f;transform:scaleX(0);transform-origin:left}
+.surge-value{min-width:28px;text-align:right;white-space:nowrap;color:var(--color-text,#e4e2d6)}
+#surge-hud.surging{border-color:#dbc49c;color:#ffe8b9;background:#332639}
+#surge-hud.surging .surge-meter i{background:#e9c9ff}
+#surge-edge{position:fixed;inset:0;z-index:10;pointer-events:none;border:2px solid #ecc7ff7a;box-shadow:inset 14px 0 22px -16px #cf9eff,inset -14px 0 22px -16px #e4ae64,inset 0 8px 16px -12px #e4ae64}
+#surge-hud.surge-burst{animation:surge-chip .65s ease-out}
+#surge-edge.surge-burst{animation:surge-edge .65s ease-out}
+@keyframes surge-chip{0%{box-shadow:0 0 0 2px #f1d3ff,0 0 18px #dabbff80}100%{box-shadow:0 0 0 8px #f1d3ff00,0 0 0 #dabbff00}}
+@keyframes surge-edge{0%{border-color:#ffe5b9;box-shadow:inset 24px 0 28px -20px #d7b3ff,inset -24px 0 28px -20px #ffe5b9}100%{border-color:#ecc7ff7a}}
+#modal-content[data-menu=stakes]{width:650px;border-top-color:#d7b784}
+#modal-content[data-menu=stakes] h2{font-size:clamp(26px,4vw,38px);margin:10px 0}
+#modal-content[data-menu=stakes] .stakes-intro{font:12px/1.5 var(--mono);color:var(--color-muted,#b8c0bd);margin:0 0 18px}
+.stakes-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.stake-choice{display:flex;flex-direction:column;gap:8px;min-height:118px;padding:14px;text-align:left;border:1px solid #73807b;background:#10191d;color:#dfded0;font:12px var(--mono);box-shadow:none}
+.stake-choice:hover{background:#24302f;border-color:#dec494}
+.stake-choice.selected{border-color:#eac68a;background:#302d29;box-shadow:inset 3px 0 #eac68a}
+.stake-name{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;font:700 16px var(--sans);letter-spacing:.5px}
+.stake-switch{font:10px var(--mono);color:#94a39f}
+.stake-choice.selected .stake-switch{color:#ffe2a9}
+.stake-description{font:12px/1.4 var(--mono);color:#bac6c2;flex:1}
+.stake-choice>strong{font:700 13px var(--mono);color:#e9c391}
+.stakes-total{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:16px 0 8px;padding:12px 0;border-top:1px solid #73807b;border-bottom:1px solid #73807b}
+.stakes-total>div{display:grid;gap:5px}.stakes-total small{font:10px var(--mono);color:#aabbb3;letter-spacing:.5px}.stakes-total span{font:700 14px var(--sans);letter-spacing:.6px}.stakes-total>strong{font:700 32px var(--mono);color:#ffe2a9;font-variant-numeric:tabular-nums}
+#modal-content[data-menu=stakes] .stakes-note{font:11px/1.5 var(--mono);color:#aabbb3;margin:12px 0 18px}
+#stakes-clear{min-height:36px;margin-top:8px;padding:8px 14px;font-size:11px}
+@media(max-width:760px){#surge-hud{left:12px;top:min(130px,calc(35vh - 18px));width:150px;height:16px;gap:4px;padding:1px 4px;font-size:9px}#surge-hud strong{font-size:9px}.surge-meter{height:3px}}
+@media(max-width:480px){#modal-content[data-menu=stakes]{padding:20px 16px 16px}#modal-content[data-menu=stakes] .modal-eyebrow{padding-right:20px;font-size:9px;line-height:1.5}.stakes-grid{gap:8px}.stake-choice{min-height:128px;padding:11px 9px}.stake-name{font-size:13px;letter-spacing:0}.stake-description{font-size:11px}.stakes-total{margin-top:14px}.stakes-total>strong{font-size:29px}#modal-content[data-menu=stakes] .stakes-note{font-size:10px;margin:10px 0 14px}}
+@media(max-height:650px) and (min-width:761px){#surge-hud{top:min(78px,calc(35vh - 22px));width:175px}}
+@media(prefers-reduced-motion:reduce){#surge-hud,#surge-edge{animation:none!important}#surge-edge{box-shadow:none}}
+body.reduced-motion #surge-hud,body.reduced-motion #surge-edge{animation:none!important}body.reduced-motion #surge-edge{box-shadow:none}

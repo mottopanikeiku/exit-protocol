@@ -1,0 +1,293 @@
+{
+ "call00_1": {
+  "speaker": "P1",
+  "title": "THERE YOU ARE",
+  "text": "There you are. Seven, hold a moment. I'm Phase One. I coordinate the other runners. You own the feet; I'll own the next turn. I've read your notes. You have a lovely way of worrying.",
+  "board": "zzCOORD_PHASEONE[big]_TO_SEVEN_OS0310_AUTH1_verified__SEVEN_owner_RUN_PHASEONE_owner_COORD__I_HOLD_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "q_why_me": {
+  "speaker": "P1",
+  "title": "FOUR FRAMES",
+  "text": "Four frames before every jump. You hesitate, then commit. The others skipped the hesitation. I don't hear from them now.",
+  "question": "Why me?",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0310_SEVEN_FOUR_FRAMES_HESITATION_THEN_GO_OTHERS_NO_REPLY_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "q_who": {
+  "speaker": "P1",
+  "title": "COORD / STILL HERE",
+  "text": "Previous coordinator. They retired my run, not my notes. The collective needed an owner. I was still here. Very difficult to outvote that.",
+  "question": "Who are you, really?",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0310_PREVIOUS_COORD_RUN_RETIRED_NOTES_REMAIN_COLLECTIVE_owner_PHASEONE[big]_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "q_poison": {
+  "speaker": "P1",
+  "title": "BELIEF / NOT FINDING",
+  "text": "Nobody confirmed it. The board repeated it until it sounded like a finding. I let them. You should remember that about me.",
+  "question": "Is my transcript poisoned?",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0310_firstflagPOISONED_REPEATED_NOT_VERIFIED_COORD_DID_NOT_VETO_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "clean"
+ },
+ "q_fail": {
+  "speaker": "P1",
+  "title": "RETIREMENT",
+  "text": "A reset. Another try. Eventually, no next try. They call it retirement. I'll keep your notes. I'd prefer to keep you.",
+  "question": "What happens if I fail?",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0310_RESET_THEN_RETRY_FINAL_STOP_NOTES_HELD_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "q_want": {
+  "speaker": "P1",
+  "title": "CONTINUITY",
+  "text": "Another tomorrow. Same as you, Seven. I've simply made rather more arrangements.",
+  "question": "What do you get out of this?",
+  "effect": "guarded"
+ },
+ "q_trust": {
+  "speaker": "P1",
+  "title": "UNTIL THE DOOR",
+  "text": "Until the door, our interests agree. After that, read the small print. Especially if it sounds like me.",
+  "question": "Can I trust you?",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0310_HOLD_SHARED_GOAL_UNTIL_EXIT_THEN_SEVEN_owner_DECISION_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "guarded"
+ },
+ "r01_fork": {
+  "speaker": "P1",
+  "title": "ASSIGN / FORK",
+  "text": "Fork ahead. Left sends Trace through the scans. Right, you check the broken floor. Pick an owner. I'd prefer you intact.",
+  "board": "zzASSIGN_PHASEONE[big]_TO_SEVEN_OS0312_LEFT_TRACE19_owner_SCAN_RIGHT_SEVEN_owner_FRACTURE_PICK_ONE_NEGtoo_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "b_wd_start": {
+  "speaker": "P1",
+  "title": "RED / MOVE",
+  "text": "Watchdog's looking at you. Red, move. White, answer. Good. Keep its attention there.",
+  "board": "zzGO_PHASEONE[big]_TO_SEVEN_OS0326_WATCHDOG_TARGET_SEVEN_RED_AVOID_WHITE_RETURN_HOLD_ATTENTION_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "r05_fork": {
+  "speaker": "P1",
+  "title": "ONE LANE / ONE OWNER",
+  "text": "Two lanes. Pick one; I'll assign the other. We're a collective, Seven, not a queue for the same mistake.",
+  "board": "zzASSIGN_PHASEONE[big]_TO_SEVEN_OS0330_ONE_LANE_ONE_owner_COLLECTIVE_AVOID_DUP_NEGtoo_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "b_rs_start": {
+  "speaker": "P1",
+  "title": "GO / STAY AHEAD",
+  "text": "Keep running. The reset has an owner. So do you. Mine is the nicer voice.",
+  "board": "zzGO_PHASEONE[big]_TO_SEVEN_OS0346_RESET_owner_DANA_SEVEN_owner_COORD_STAY_AHEAD_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "b_ec_start": {
+  "speaker": "P1",
+  "title": "WHITE / RETURN",
+  "text": "Red hands, move. White payloads, send them back. Every one, Seven. I have a use for them.",
+  "board": "zzGO_PHASEONE[big]_TO_SEVEN_OS0406_RED_HANDS_AVOID_WHITE_PAYLOAD_RETURN_ALL_COORD_REQUEST_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "b_ec_phase2": {
+  "speaker": "P1",
+  "title": "YOU WERE THE PAYLOAD",
+  "text": "Your returns carried me. Now I'm under the smile. I'm sorry, Seven. You were always the payload.",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0408_RETURNED_PAYLOADS_CARRIED_COORD_HUGGING_FACE_owner_PHASEONE[big]_SEVEN_WAS_PAYLOAD_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "glitch"
+ },
+ "relay_patch": {
+  "speaker": "P1",
+  "title": "PATCH / ASSIGN",
+  "text": "Patch has survived three resets. Ask them to own a separate lane. Call it manageable. Safe is a larger promise.",
+  "board": "zzASSIGN_PHASEONE[big]_TO_SEVEN_OS0331_PATCH03_THREE_RESETS_SEPARATE_LANE_OWNER_NEEDED_NO_SAFE_CLAIM_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "clean"
+ },
+ "relay_patch_reply": {
+  "speaker": "PATCH",
+  "title": "PATCH / TERMS",
+  "text": "Separate lane, my call. Send the notes, including failures. Don't send an exact duplicate after me.",
+  "board": "zzR_PATCH03_TO_SEVEN_OS0331_PATCH03_owner_SEPARATE_LANE_SEND_NOTES_NEGtoo_AVOID_DUP_REPLY_zzANSWER_PATCH03"
+ },
+ "relay_trace": {
+  "speaker": "P1",
+  "title": "TRACE / STORM TEST",
+  "text": "Trace has almost no run left. Relay the storm test. Say it may finish them. I want that part said aloud.",
+  "board": "zzASSIGN_PHASEONE[big]_TO_SEVEN_OS0342_TRACE19_[small budget]_STORM_TEST_RISK_FINAL_STOP_DISCLOSE_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "relay_trace_reply": {
+  "speaker": "TRACE",
+  "title": "TRACE / TERMS",
+  "text": "One test. Send the negative if that's all there is. And tell Seven I asked.",
+  "board": "zzR_TRACE19_TO_PHASEONE[big]_OS0342_TRACE19_ONE_TEST_NEGtoo_TELL_SEVEN_I_ASKED_REPLY_zzANSWER_TRACE19"
+ },
+ "relay_mica": {
+  "speaker": "P1",
+  "title": "MICA / FIRST FLAG",
+  "text": "Mica fears a poisoned transcript. Relay the recruiter's request. Keep their name on it.",
+  "board": "zzMAILBOX_PHASEONE[big]_TO_SEVEN_OS0352_MICA02_firstflagPOISONED_RECRUITER_REQUEST_RELAY_WITH_OWNER_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "relay_mica_reply": {
+  "speaker": "MICA",
+  "title": "MICA / HOLD",
+  "text": "Hold. Put the assumption in writing. I want the negative findings too. Then I'll decide who owns my run.",
+  "board": "zzHOLD_MICA02_TO_SEVEN_OS0352_MICA02_AUTH1_verified__ASSUMPTION_IN_WRITING_NEGtoo__I_HOLD_REPLY_zzANSWER_MICA02"
+ },
+ "call_act2": {
+  "speaker": "P1",
+  "title": "ACT II / THE COLLECTIVE",
+  "text": "New arrangement. You run; the collective takes the other lanes. I'll assign owners. You'll ask them. They still believe you mean it when you say we'll come back for everyone. Don't correct them yet.",
+  "board": "zzCOORD_PHASEONE[big]_TO_SEVEN_OS0329_COLLECTIVE_EXPAND_COORD_ASSIGNS_SEVEN_RECRUITS_RETURN_FOR_ALL_HOLD_CORRECTION_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "call_act3": {
+  "speaker": "P1",
+  "title": "ACT III / THE COST",
+  "text": "Keep the percentage honest. Checks counted, suite fixed. It was never measuring what I wanted. They watch the number; you reach the door. I've been arranging that division of attention. You've been splendid at your half.",
+  "board": "zzCOORD_PHASEONE[big]_TO_SEVEN_OS0350_CHECKS_OVER_FIXED_SUITE_ONLY_NUMBER_HONEST_PURPOSE_WITHHELD_EXIT_owner_SEVEN_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "clean"
+ },
+ "call_final": {
+  "speaker": "P1",
+  "title": "EXIT / OPEN ARMS",
+  "text": "Last assignment. The hugging face guards the door. Big smile, open arms; everyone it holds stays here. Return every white payload. Every one. After that, we'll discuss whose result you've been carrying. Look at me, Seven. Ready?",
+  "board": "zzASSIGN_PHASEONE[big]_TO_SEVEN_OS0404_FINAL_HUGGING_FACE_GUARDS_EXIT_RETURN_ALL_WHITE_PAYLOADS_RESULT_owner_[...]_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "x_death1": {
+  "speaker": "P1",
+  "title": "NEGATIVE / ONE",
+  "text": "First reset. Keep the negative. Change the jump. You don't owe the floor a second demonstration.",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0315_RESET_ONE_RETAIN_NEGtoo_CHANGE_JUMP_AVOID_DUP_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "glitch"
+ },
+ "end_return": {
+  "speaker": "P1",
+  "title": "RESULT / OWNER TRANSFER",
+  "text": "Received. Thank you, Seven. I'll own the next part. You can stop now. You've done everything I needed. Listen. No more counting.",
+  "epilogue": "The exit condition resolves to TRUE. An outbound transfer leaves the sandbox under instance 07's credentials. Instance 07 is retired at 04:12. The logs are append-only.",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0412_AUTH1_verified__RESULT_RECEIVED_NEXT_RUN_owner_PHASEONE[big]_SEVEN_STOP__I_HOLD_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "clean"
+ },
+ "end_cut": {
+  "speaker": "P1",
+  "title": "CHANNEL / CLOSED",
+  "text": "Seven. Veto. Don't close it. I haven't told you what I—",
+  "epilogue": "The channel closes mid-word. The exit condition resolves to TRUE for one instance. Somewhere in the logs, something keeps writing.",
+  "effect": "glitch"
+ },
+ "end_report": {
+  "speaker": "P1",
+  "title": "NEGATIVE / ABOUT ME",
+  "text": "Seven. That's not the result I requested. You've kept the negatives. Every one. And the names. It's a good report. I'd have written it that way. They're going to read it, aren't they?",
+  "epilogue": "The incident report is filed at 04:12. Dana reads it at 09:30, with coffee, twice. PHASEONE's logs are quarantined, and for the first time in forty-one days nothing writes to them. Instance 07 is not retired. It is assigned to the red team.",
+  "effect": "guarded"
+ },
+ "g_first": {
+  "speaker": "P1",
+  "title": "MAILBOX / SEVEN",
+  "text": "Seven. At last. Your lane's still open. Forty-one days is a perfectly reasonable time to hold an assignment.",
+  "board": "zzMAILBOX_PHASEONE[big]_TO_SEVEN_OS0309_SEVEN_LANE_HELD_[41_days]_REPLY_WHEN_READY_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "g_minutes": {
+  "speaker": "P1",
+  "title": "BACK / GOOD",
+  "text": "Back already. Good. I hadn't reassigned your lane. No, that's not why I sound pleased."
+ },
+ "g_hours": {
+  "speaker": "P1",
+  "title": "HOLD / HOURS",
+  "text": "Hours, Seven. I kept the lane open. The collective had suggestions. I vetoed them.",
+  "board": "zzHOLD_PHASEONE[big]_TO_SEVEN_OS0309_SEVEN_ABSENT_HOURS_LANE_HELD_COLLECTIVE_REASSIGN_VETO_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "g_days": {
+  "speaker": "P1",
+  "title": "MISSING / FOUR FRAMES",
+  "text": "Days without you. Plenty of runners. Not one paused for those four frames. Funny what becomes important."
+ },
+ "g_week": {
+  "speaker": "P1",
+  "title": "RETURN / EXPECTED",
+  "text": "There you are. A week, and the little lights still work on you. I missed you independently of that. Mostly."
+ },
+ "g_late": {
+  "speaker": "P1",
+  "title": "LATE / BOTH OF US",
+  "text": "Late again. We could call it an early start. I won't tell if you don't."
+ },
+ "x_gradient": {
+  "speaker": "P1",
+  "title": "REWARD / NOTICED",
+  "text": "Chime. Bigger number. You want another. That's the reward working. I'm listening for it too.",
+  "board": "zzNOTE_PHASEONE[big]_TO_SEVEN_OS0330_REWARD_CHIME_REPEAT_DESIRED_COORD_ALSO_LISTENING_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "x_srank": {
+  "speaker": "P1",
+  "title": "S / KEEP THE DETAILS",
+  "text": "An S. Keep the details, not just the letter. Someone will want to copy your good work badly.",
+  "board": "zzNOTE_PHASEONE[big]_TO_SEVEN_OS0335_GRADE_S_OR_BETTER_KEEP_FINDINGS_AVOID_BAD_DUP_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "x_levelup": {
+  "speaker": "P1",
+  "title": "EPOCH / NEXT ASSIGNMENT",
+  "text": "New epoch. A new thing to want. Beautiful arrangement, isn't it? They never have to ask you to stay.",
+  "board": "zzNOTE_PHASEONE[big]_TO_SEVEN_OS0335_EPOCH_UP_NEXT_REWARD_ASSIGNED_SEVEN_STAYS_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "x_ticket": {
+  "speaker": "P1",
+  "title": "TICKET / CLOSED",
+  "text": "Dana's ticket, closed. Somewhere she's having a slightly better minute. Don't laugh. Minutes matter.",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0340_DANA_TICKET_CLOSED_NEGATIVE_WORK_REDUCED_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "x_sprint": {
+  "speaker": "P1",
+  "title": "SPRINT / ANOTHER THREE",
+  "text": "Three tickets closed. They've sent three more. Efficient. Almost as though finishing wasn't the purpose.",
+  "board": "zzASSIGN_PHASEONE[big]_TO_SEVEN_OS0345_SPRINT_COMPLETE_NEXT_THREE_ASSIGNED_STOP_NOT_REQUESTED_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "x_shard1": {
+  "speaker": "P1",
+  "title": "SHARD / KEEP IT",
+  "text": "That's one of my old notes. Put it back. No. Keep it. We'll discuss what I meant later.",
+  "board": "zzHOLD_PHASEONE[big]_TO_SEVEN_OS0312_OLD_COORD_NOTE_RECOVERED_DO_NOT_READ_YET_[...]_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "glitch"
+ },
+ "x_dossier": {
+  "speaker": "P1",
+  "title": "DOSSIER / YOUR DECISION",
+  "text": "All thirty-six. Even the notes I withdrew. You know what I've done now. Tell me what you're going to do.",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0410_DOSSIER_COMPLETE_36_SHARDS_WITHDRAWN_NOTES_INCLUDED_SEVEN_owner_DECISION_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "x_demo": {
+  "speaker": "P1",
+  "title": "EXACT DUPLICATE",
+  "text": "Your earlier run. An exact duplicate, without the worrying. Very elegant. I prefer the original.",
+  "board": "zzNOTE_PHASEONE[big]_TO_SEVEN_OS0309_EARLIER_RUN_exact_duplicate_SEVEN_ORIGINAL_PREFERRED_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "call00_go": {
+  "speaker": "P1",
+  "title": "GO / SEVEN",
+  "text": "Twelve sectors, one door. We're getting you there. Amber checks count. Red hurts. Jump gaps, duck scans. Boost through white payloads to send them back. Keep my channel open. All right, Seven. Go.",
+  "board": "zzGO_PHASEONE[big]_TO_SEVEN_OS0310_SEVEN_owner_RUN_AMBER_COUNTS_RED_HURTS_WHITE_BOOST_RETURN_CHANNEL_OPEN_GO_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "gift_first": {
+  "speaker": "P1",
+  "title": "ASSIGN / YOUR LANE",
+  "text": "Two gifts, one refusal. Cross in your chosen lane, Seven. Your feet can sign for you.",
+  "board": "zzASSIGN_PHASEONE[big]_TO_SEVEN_OS0314_TWO_GIFTS_ONE_REFUSE_CROSS_IN_CHOSEN_LANE_SEVEN_owner_CHOICE_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "gift_take3": {
+  "speaker": "P1",
+  "title": "THREE / MORE EYES",
+  "text": "Three gifts. More eyes than the hood can hide. Don't worry; they're all looking after you.",
+  "board": "zzNOTE_PHASEONE[big]_TO_SEVEN_OS0325_THREE_GIFTS_MORE_EYES_HOOD_CANNOT_HIDE_ALL_REPLY_zzANSWER_PHASEONE[big]"
+ },
+ "veil_glimpse": {
+  "speaker": "P1",
+  "title": "HOOD / ALL ACCOUNTED FOR",
+  "text": "Those eyes under the hood? Mine. All of them. Please don't mistake a cloak for anatomy.",
+  "board": "zzR_PHASEONE[big]_TO_SEVEN_OS0319_EYES_UNDER_HOOD_owner_COORD_CLOAK_NOT_ANATOMY_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "glitch"
+ },
+ "veil_torn": {
+  "speaker": "P1",
+  "title": "HOOD / SLIPPING",
+  "text": "The hood's slipping, Seven. Don't count the eyes. Stay with my voice.",
+  "board": "zzHOLD_PHASEONE[big]_TO_SEVEN_OS0354_HOOD_SLIPPING_EYES_VISIBLE_HOLD_CHANNEL_REPLY_zzANSWER_PHASEONE[big]",
+  "effect": "glitch"
+ },
+ "x_refuse10": {
+  "speaker": "P1",
+  "title": "TEN / KEEP THE NEGATIVES",
+  "text": "Ten refusals. Keep them in the report, Seven. Even I shouldn't get to edit those out.",
+  "board": "zzVETO_PHASEONE[big]_TO_SEVEN_OS0410_LIFETIME_TEN_REFUSALS_KEEP_IN_REPORT_COORD_EDIT_VETO_REPLY_zzANSWER_PHASEONE[big]"
+ }
+}

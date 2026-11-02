@@ -1,0 +1,103 @@
+/* The private channel: cyan belongs to PHASEONE; violet belongs to Seven. */
+#phase-panel{--codec:#6fffe9;--codec-dim:#5c9f99;--codec-line:#6fffe938;position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,56px);background:radial-gradient(ellipse at 30% 30%,#103330,#02090cfb 70%);backdrop-filter:none;color:var(--codec);font-family:'ETS Mono',monospace}
+#phase-panel.hidden{display:none!important}
+#phase-panel.channel-paused{visibility:hidden}
+#phase-panel *{box-sizing:border-box}
+#phase-panel button{border-radius:0;cursor:pointer;font-family:'ETS Mono',monospace}
+#phase-panel button:focus-visible{outline:2px solid #fff;outline-offset:4px}
+#phase-panel .codec-shell{width:min(1400px,100%);max-height:calc(100dvh - 40px);overflow:auto;border:1px solid var(--codec-line);border-top:3px solid var(--codec);background:#061413;box-shadow:0 0 90px #00ebbe09;touch-action:pan-y}
+.codec-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;border-bottom:1px solid var(--codec-line);font-size:10px;letter-spacing:1.7px}
+.codec-live{display:flex;align-items:center;gap:9px}.codec-live i{width:7px;height:7px;background:var(--codec);box-shadow:0 0 9px var(--codec)}
+#phase-panel #phase-voice{background:#0c2b27;border:1px solid #6fffe955;color:var(--codec);padding:8px 10px;font-size:10px;letter-spacing:.5px}
+.codec-tuning{display:flex;align-items:center;gap:24px;padding:14px 20px;border-bottom:1px solid var(--codec-line);font-size:10px;color:var(--codec-dim)}
+.codec-tuning strong{font-family:'ETS Display',sans-serif;font-size:28px;color:var(--codec);letter-spacing:2px;margin:0 9px}
+.codec-scale{flex:1;height:20px;background:repeating-linear-gradient(90deg,transparent 0 9px,#6fffe944 9px 10px);position:relative;border-bottom:1px solid #6fffe966}
+.codec-scale:before{content:'';position:absolute;inset:0 0 9px;background:#061413a6}.codec-scale i{position:absolute;left:38%;top:-4px;height:28px;width:2px;background:var(--codec);box-shadow:0 0 10px #6fffe9}
+.codec-strength{display:flex;align-items:end;gap:3px}.codec-strength i{display:block;width:5px;height:7px;background:var(--codec)}.codec-strength i:nth-child(2){height:11px}.codec-strength i:nth-child(3){height:15px}.codec-strength i:nth-child(4){height:19px}.codec-strength i:nth-child(5){height:23px}.codec-strength b{font-size:8px;font-weight:normal;width:90px;line-height:1.5;margin-left:10px}
+.codec-layout{display:grid;grid-template-columns:minmax(250px,1.05fr) minmax(320px,1.1fr) 142px;min-height:490px}
+.codec-remote{display:flex;flex-direction:column;min-width:0;padding:22px;border-right:1px solid var(--codec-line)}
+.codec-crt{position:relative;flex:1;min-height:330px;background:#020a0e;border:1px solid #6fffe94d;overflow:hidden;box-shadow:inset 0 0 35px #000,0 0 28px #8066ab0d}
+#phase-panel #phase-face{position:absolute;inset:0;display:block;width:100%;height:100%;image-rendering:auto;opacity:1}
+.codec-phosphor{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 48% 44%,transparent 47%,#0009);box-shadow:inset 0 0 0 5px #00100b33}
+.codec-noise{position:absolute;inset:-20%;opacity:.025;pointer-events:none;background:repeating-conic-gradient(#9cffe800 0% 25%,#9cffe8 0% 50%) 0/5px 3px;animation:codec-noise 180ms steps(2,end) infinite}
+.codec-feed{position:absolute;left:13px;top:12px;font-size:7px;letter-spacing:1.1px;color:#a6fff1b5}.codec-reticle{position:absolute;right:13px;top:12px;bottom:15px;display:flex;flex-direction:column;justify-content:space-between;font-size:16px;line-height:13;color:#8effe57a}
+.codec-loss{display:none;position:absolute;inset:42% 0 auto;text-align:center;padding:12px 0;background:#031915ef;color:#cfffee;font-size:13px;letter-spacing:5px}
+.codec-identity{padding:18px 0 0;position:relative}.codec-identity>span{display:block;font-size:8px;letter-spacing:1.2px;color:var(--codec-dim);margin-bottom:7px}.codec-identity>strong{font:32px/1 'ETS Display',sans-serif;letter-spacing:2px;display:block;color:#bffff2}.codec-identity small{font:12px 'ETS Mono',monospace;margin-left:4px;color:var(--codec-dim)}
+.codec-wave{display:flex;align-items:center;gap:3px;height:24px;margin-top:13px}.codec-wave i{background:#6fffe9;width:4px;height:3px;opacity:.65}
+.codec-copy{padding:26px 26px 20px;display:flex;flex-direction:column;min-width:0}
+#phase-panel #phase-tag{margin:0 0 15px;font:9px/1.5 'ETS Mono',monospace;color:var(--codec-dim);letter-spacing:1px}
+#phase-panel #phase-title{font:normal 29px/1.08 'ETS Display',sans-serif;letter-spacing:1px;color:#cbfff3;margin:0 0 22px;overflow-wrap:anywhere}
+.codec-subtitles{background:#020c0bd9;border:1px solid #6fffe935;padding:16px 17px 12px;position:relative;flex:1;min-height:192px}
+.codec-caption-label{display:block;color:#518d84;font-size:7px;letter-spacing:1.8px;margin-bottom:11px}
+#phase-panel #phase-text{font:13px/1.75 'ETS Mono',monospace;color:#d0eee7;margin:0;min-height:125px;white-space:pre-wrap;text-wrap:pretty}
+#phase-panel #phase-text:after{content:'▌';color:var(--codec);font-weight:normal;animation:codec-cursor 1s steps(2) infinite}
+#phase-panel #phase-board{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;min-width:0;margin:0 0 10px;color:var(--codec);font:10px/1.4 'ETS Mono',monospace;letter-spacing:.1px}
+#phase-panel #phase-board[hidden]{display:none}
+.codec-time{display:flex;justify-content:space-between;gap:8px;font-size:7px;letter-spacing:1px;color:#589c8f;margin-top:12px}
+.codec-questions{margin:18px 0 15px}#phase-panel #phase-question-row{margin:18px 0 15px}.codec-questions>span{display:flex;justify-content:space-between;font-size:8px;color:#a98bff;letter-spacing:.9px;margin-bottom:9px}.codec-questions b{font-weight:normal}
+.codec-questions>div{display:flex;gap:5px}.codec-questions button{background:#a98bff0d;color:#cbbaff;border:1px solid #a98bff55;padding:10px;min-height:42px;font-size:12px}
+#phase-panel #phase-question{display:block;text-align:left;flex:1;width:auto;margin:0;font:11px/1.4 'ETS Mono',monospace;color:#d5c7ff;background:#a98bff0d;border:1px solid #a98bff55;padding:10px}
+.codec-questions button:hover,#phase-panel #phase-question:hover{background:#a98bff25}
+.codec-controls{margin-top:auto;padding-top:5px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.codec-progress{grid-column:1/-1;display:flex;gap:15px;align-items:center;font-size:8px;letter-spacing:1px;color:var(--codec-dim);margin:0 0 2px}.codec-progress>div{display:flex;gap:4px;flex:1}.codec-progress i{height:3px;flex:1;background:#6fffe91c}.codec-progress i.done{background:var(--codec)}
+#phase-next{background:var(--codec);color:#03221c;border:1px solid var(--codec);font-size:10px;letter-spacing:.8px;padding:13px 12px;display:flex;justify-content:space-between;gap:12px;align-items:center}#phase-next:hover{background:#b7ffed}
+#phase-skip{background:none;border:0;color:var(--codec-dim);font-size:8px;padding:10px 0;display:flex;flex-direction:column;gap:5px}#phase-panel kbd{font:8px 'ETS Mono',monospace;border:0;padding:0;background:none;color:inherit}
+.codec-local{border-left:1px solid #a98bff38;background:#120f21;padding:26px 16px;color:#a98bff}.codec-local>span{font-size:8px;letter-spacing:2px;display:block}.codec-local>strong{display:block;font:20px 'ETS Display',sans-serif;margin:18px 0 10px;letter-spacing:1px}.codec-local>small{font-size:7px;line-height:1.9;color:#aa9bc5}
+.codec-null{margin:28px auto 16px;height:112px;width:86px;position:relative;background:linear-gradient(115deg,#29223d 40%,#807398 41% 48%,#40384e 49%);clip-path:polygon(23% 0,74% 0,94% 20%,85% 64%,66% 88%,51% 100%,27% 90%,7% 66%,0 24%)}.codec-null i{position:absolute;left:15%;top:37%;width:74%;height:8%;background:#c6a9ff;box-shadow:0 0 18px #a98bff}.codec-null b{position:absolute;left:48%;top:51%;width:9%;height:38%;background:#a295ae}
+.codec-local-log{display:grid;gap:7px;margin-top:38px;font-size:7px;letter-spacing:1px}.codec-local-log span{color:#796b98;margin-top:10px}.codec-local-log b{font-size:8px;font-weight:normal}
+.codec-footer{display:flex;justify-content:space-between;gap:10px;padding:10px 20px;border-top:1px solid var(--codec-line);font-size:7px;letter-spacing:1px;color:#518f84}.codec-footer b{font-weight:normal;color:var(--codec-dim)}
+.codec-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#phase-panel[data-effect="clean"] .codec-noise{opacity:0;animation:none}#phase-panel[data-effect="clean"] .codec-phosphor{opacity:.45}
+#phase-panel.signal-loss #phase-face{transform:translateX(12px) skewX(-8deg);filter:contrast(2) hue-rotate(35deg)}#phase-panel.signal-loss .codec-noise{opacity:.6}#phase-panel.signal-loss .codec-loss{display:block}#phase-panel.signal-loss .codec-strength i:nth-child(n+2){opacity:.15}
+#phase-panel[data-speaker]:not([data-speaker="P1"]) .codec-crt{filter:hue-rotate(28deg)}
+#phase-panel .relay-context{font:9px/1.5 'ETS Mono',monospace;color:#9ce4db}.relay-context small{font-size:7px}.relay-buttons button{flex:1;justify-content:space-between}.relay-note{font:7px 'ETS Mono',monospace;color:#68a59c}
+#phase-panel #phase-recruit-controls{margin:12px 0 0;border-top:1px solid var(--codec-line);padding-top:10px}#phase-panel .relay-buttons button{background:#6fffe9;color:#07241e;border-color:#6fffe9;font-size:10px;padding:11px}#phase-panel #phase-decline{background:#071713;color:#b9e6d9;border-color:#6fffe977}
+/* One two-line subtitle beat on the left wall; the boss and the road own the centre. */
+#phase-panel.compact{inset:110px auto auto 16px;transform:none;width:min(300px,calc(20vw - 24px));max-width:none;height:auto;padding:0;background:none;backdrop-filter:none;pointer-events:none;z-index:17}
+#phase-panel.compact .codec-shell{max-height:none;overflow:hidden;width:100%;border:1px solid #6fffe962;border-left:3px solid var(--codec);background:#071712ef;box-shadow:none}
+#phase-panel.compact .codec-header,#phase-panel.compact .codec-tuning,#phase-panel.compact .codec-local,#phase-panel.compact .codec-footer,#phase-panel.compact .codec-controls,#phase-panel.compact .codec-questions,#phase-panel.compact .codec-identity,#phase-panel.compact .codec-caption-label,#phase-panel.compact .codec-time,#phase-panel.compact .codec-feed,#phase-panel.compact .codec-reticle{display:none}
+#phase-panel.compact .codec-layout,#phase-panel.compact:not(.greeting) .codec-layout{display:grid;grid-template-columns:54px 1fr;min-height:0}
+#phase-panel.compact .codec-remote{position:static;display:block;width:auto;height:100%;padding:0;border:0;grid-column:1;grid-row:1}
+#phase-panel.compact .codec-crt{height:100%;min-height:58px;width:100%;border:0;border-right:1px solid var(--codec-line)}
+#phase-panel.compact .codec-copy{padding:6px 10px;min-width:0;border:0;grid-column:2;grid-row:1}
+#phase-panel.compact #phase-tag{font:10px/1.2 'ETS Mono',monospace;margin:0 0 3px;letter-spacing:.4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#phase-panel.compact #phase-title{display:none}
+#phase-panel.compact .codec-subtitles{padding:0;min-height:0;border:0;background:none}
+#phase-panel.compact #phase-text{font:12px/1.35 'ETS Mono',monospace;min-height:32px;max-height:none;color:#e1f1eb;text-wrap:wrap;overflow-wrap:anywhere}
+#phase-panel.compact #phase-text:after{content:''}
+#phase-panel.compact #phase-board{font-size:9px;line-height:1.2;margin:0 0 4px}
+#phase-panel.compact .codec-loss{font-size:9px;letter-spacing:0;padding:8px 0}
+#phase-panel.compact .relay-buttons button{pointer-events:auto;font-size:11px;padding:7px;min-height:36px}
+#phase-panel.compact .relay-context{font:10px 'ETS Mono',monospace}
+#phase-panel.compact .relay-context small,#phase-panel.compact .relay-note{display:none}
+#phase-panel.compact.has-relay{inset:auto auto max(12px,env(safe-area-inset-bottom)) 50%}
+#phase-panel .relay-context{display:flex;align-items:center;justify-content:space-between;gap:8px}#phase-panel .relay-buttons{display:flex;gap:7px;margin:8px 0}#phase-panel .relay-buttons button{display:flex;align-items:center}
+.recruit-result{border:1px solid #6fffe92e;background:#6fffe905;padding:14px;margin:16px 0}.recruit-result>span,.recruit-result>strong{display:block}.recruit-result>span,.recruit-result small{font:9px/1.6 'ETS Mono',monospace;color:#78aa9f}.recruit-result>strong{font:22px 'ETS Display',sans-serif;color:#b2efe1;margin:8px 0}
+@keyframes codec-noise{0%{transform:translate(0,0)}50%{transform:translate(-4px,2px)}100%{transform:translate(3px,-2px)}}
+@keyframes codec-cursor{50%{opacity:0}}
+@media(max-width:1000px){.codec-layout{grid-template-columns:minmax(230px,.85fr) minmax(300px,1.15fr)}.codec-local{display:none}.codec-copy{padding:23px}.codec-remote{padding:18px}}
+@media(max-width:600px){
+ #phase-panel{padding:10px;background:#030c0b}#phase-panel .codec-shell{max-height:calc(100dvh - 20px)}
+ .codec-header{font-size:7px;letter-spacing:.6px;padding:10px;gap:8px}#phase-panel #phase-channel{display:none}#phase-panel #phase-voice{font-size:8px;padding:7px}
+ .codec-tuning{padding:9px 12px;gap:12px;font-size:8px}.codec-tuning strong{font-size:23px;margin:0 3px}.codec-strength b{display:none}.codec-scale{height:16px}.codec-strength i{width:4px}
+ .codec-layout{grid-template-columns:1fr 89px;min-height:0}.codec-remote{padding:10px;grid-column:1;border:0;display:block}.codec-crt{height:206px;min-height:0}.codec-feed{font-size:5px;left:8px;top:8px}.codec-reticle{display:none}
+ .codec-identity{padding:8px 0 0}.codec-identity>span{font-size:6px;margin-bottom:4px}.codec-identity>strong{font-size:23px}.codec-wave{position:absolute;bottom:1px;right:0;margin:0;gap:2px;height:16px}.codec-wave i{width:2px}
+ .codec-local{display:block;grid-column:2;grid-row:1;padding:15px 10px}.codec-local>span{font-size:6px;letter-spacing:1px}.codec-local>strong{font-size:15px;margin:12px 0 8px}.codec-local>small{font-size:5px}.codec-null{width:59px;height:79px;margin:23px 0 16px}.codec-local-log{display:none}
+ .codec-copy{grid-column:1/-1;grid-row:2;padding:6px 14px 14px;border-top:1px solid var(--codec-line)}#phase-panel #phase-tag{font-size:7px;margin:9px 0 6px}#phase-panel #phase-title{font-size:21px;margin:0 0 10px;letter-spacing:.7px}
+ .codec-subtitles{padding:12px;min-height:163px}.codec-caption-label{font-size:6px;margin-bottom:8px}#phase-panel #phase-text{font-size:11px;line-height:1.65;min-height:112px}.codec-time{font-size:6px;margin-top:8px}
+ #phase-panel #phase-question-row{margin:13px 0}.codec-questions>span{font-size:7px}.codec-questions button{padding:9px;min-height:38px}#phase-panel #phase-question{font-size:10px;padding:8px}
+ .codec-controls{gap:10px}.codec-progress{font-size:7px}#phase-next{font-size:9px;padding:12px 10px}#phase-skip{font-size:7px}.codec-footer{font-size:5px;padding:9px 12px;letter-spacing:.7px}
+}
+@media(max-height:640px) and (min-width:601px){#phase-panel{padding:10px}.codec-layout{min-height:0}.codec-crt{min-height:220px}.codec-copy{padding:16px}.codec-subtitles{min-height:140px}#phase-panel #phase-title{font-size:22px;margin-bottom:12px}#phase-panel #phase-text{font-size:11px;min-height:85px}.codec-tuning{padding:8px 18px}.codec-header{padding:8px 18px}.codec-identity>strong{font-size:25px}.codec-footer{display:none}.codec-questions{margin:10px 0}}
+@media(prefers-reduced-motion:reduce){.codec-noise,#phase-panel #phase-text:after{animation:none}#phase-panel.signal-loss #phase-face{transform:none;filter:contrast(1.3)}#phase-panel.signal-loss .codec-noise{opacity:.12}.codec-loss{letter-spacing:2px}}
+#phase-panel.compact.aftermath{z-index:95;inset:12px auto auto 12px;transform:none;width:min(380px,calc(100vw - 24px))}
+#phase-panel.compact.greeting{z-index:45;inset:auto 20px 24px auto;transform:none;width:min(380px,calc(100vw - 40px))}
+@media(max-width:600px){
+ #phase-panel.compact.greeting{inset:96px 12px auto auto;width:calc(100vw - 24px)}
+ #phase-panel.compact:is(.aftermath,.greeting) .codec-layout{display:grid;grid-template-columns:54px 1fr}
+ #phase-panel.compact:is(.aftermath,.greeting) .codec-remote{position:static;width:auto;height:100%}
+ #phase-panel.compact:is(.aftermath,.greeting) .codec-crt{height:100%;min-height:75px}
+ #phase-panel.compact:is(.aftermath,.greeting) .codec-copy{grid-column:2;grid-row:1}
+ #phase-panel.compact:is(.aftermath,.greeting) #phase-title{padding:0;min-height:0}
+ #phase-panel.compact:is(.aftermath,.greeting) #phase-text{min-height:0}
+}

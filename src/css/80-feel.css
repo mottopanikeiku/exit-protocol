@@ -1,0 +1,8 @@
+/* Presentation overlays never intercept gameplay or result controls. */
+#feel-screen{position:fixed;inset:0;z-index:38;pointer-events:none;opacity:0;background:#020108}
+#feel-screen.flash{background:#f8f2ff}
+#feel-screen.fall{background:repeating-linear-gradient(0deg,#010108 0 3px,#11101d 3px 4px,#03010b 4px 7px);background-size:100% 7px}
+#feel-skip{position:fixed;bottom:5%;left:0;right:0;z-index:39;text-align:center;color:#d8c9f8;font:11px var(--mono,monospace);letter-spacing:.2em;pointer-events:none;opacity:0}
+#feel-skip.visible{opacity:.85}
+.instance-dying #touch-controls,.instance-dying #encounter-cue,.instance-dying #clear-feedback,.instance-dying #route-receipt,.instance-dying #callout,.instance-dying #hit-flash,.instance-dying #chapter-banner{visibility:hidden}
+@media(prefers-reduced-motion:reduce){#feel-screen{background:#020108!important}#feel-skip{display:none}}

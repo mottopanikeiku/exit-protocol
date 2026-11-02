@@ -1,0 +1,12 @@
+{
+  "sample_rate": 24000,
+  "bitrate_kbps": 32,
+  "ellipsis_ms": 380,
+  "dash_ms": 170,
+  "speakers": {
+    "P1": {"voices": {"bm_george": 0.5, "am_onyx": 0.5}, "lang": "en-gb", "speed": 0.9, "lufs": -18.0},
+    "PATCH": {"voices": {"af_jessica": 1.0}, "lang": "en-us", "speed": 0.98, "lufs": -20.0},
+    "TRACE": {"voices": {"am_fenrir": 1.0}, "lang": "en-us", "speed": 0.98, "lufs": -20.0},
+    "MICA": {"voices": {"bf_emma": 1.0}, "lang": "en-gb", "speed": 0.96, "lufs": -20.0}
+  }
+}

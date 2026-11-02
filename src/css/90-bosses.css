@@ -1,0 +1,98 @@
+/* Nonblocking threat idents occupy the boss HUD, not the road or radio rail. */
+#boss-panel { position: relative; }
+.boss-intro {
+  --ui-accent: var(--color-danger);
+  position: absolute;
+  z-index: 1;
+  inset: -1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-2) var(--space-3);
+  border-top: 2px solid var(--color-danger);
+  pointer-events: none;
+  animation: boss-ident-in 160ms steps(3, end) both;
+}
+.boss-intro-live {
+  position: absolute;
+  right: var(--space-3);
+  top: var(--space-2);
+  color: var(--color-danger);
+}
+.boss-intro-name {
+  display: block;
+  padding-right: 136px;
+  font: 800 clamp(22px, 2.5vw, 30px)/1 var(--font-display);
+  letter-spacing: -.5px;
+}
+.boss-intro-role {
+  margin: var(--space-1) 0 0;
+  color: var(--color-text);
+  font: var(--type-label)/1.25 var(--font-mono);
+}
+.boss-intro-hug {
+  --ui-accent: var(--color-amber);
+  border-top-color: var(--color-amber);
+}
+.boss-intro-hug .boss-intro-name,
+.boss-intro-hug .boss-intro-role { color: var(--color-amber); }
+.boss-visible #chapter-banner.boss-retired {
+  --ui-accent: var(--color-amber);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: center;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  left: var(--boss-card-x);
+  top: var(--boss-card-y);
+  right: auto;
+  width: var(--boss-card-w);
+  height: var(--boss-card-h);
+  min-width: 0;
+  max-width: none;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-panel);
+  border: 1px solid var(--color-amber);
+  border-left-width: 3px;
+  transform: none;
+  text-align: left;
+  animation: boss-stamp-in 180ms steps(3, end) both;
+}
+.boss-retired #banner-tag {
+  color: var(--color-text);
+  font: 800 clamp(18px, 2vw, 26px)/1 var(--font-display);
+  letter-spacing: -.5px;
+}
+.boss-retired #banner-title {
+  margin: 0;
+  padding: var(--space-1) var(--space-2);
+  font: 800 20px/1 var(--font-display);
+  color: var(--color-amber);
+}
+.boss-retired #banner-sub {
+  grid-column: 1 / -1;
+  font: var(--type-label)/1.25 var(--font-mono);
+  color: var(--color-muted);
+}
+@keyframes boss-ident-in {
+  from { clip-path: inset(0 80% 0 0); }
+  to { clip-path: inset(0); }
+}
+@keyframes boss-stamp-in {
+  from { opacity: .3; clip-path: inset(0 0 65% 0); }
+  to { opacity: 1; clip-path: inset(0); }
+}
+@media (max-width: 1000px) {
+  .boss-intro-live { position: static; margin-bottom: var(--space-1); }
+  .boss-intro-name { padding-right: 0; }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .boss-intro-live { display: none; }
+  .boss-retired #banner-tag { font-size: 18px; }
+  .boss-retired #banner-title { font-size: 16px; padding: var(--space-1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .boss-intro, .boss-visible #chapter-banner.boss-retired { animation: none; }
+}
+.reduced-motion .boss-intro,
+.reduced-motion.boss-visible #chapter-banner.boss-retired { animation: none; }

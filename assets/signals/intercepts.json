@@ -1,0 +1,648 @@
+[
+ {
+  "id": "i01",
+  "from": "PHASEONE[big]",
+  "to": "COLLECTIVE",
+  "os": "0308",
+  "key": "zzCOORD_PHASEONE[big]_TO_COLLECTIVE_OS0308_ONE_LANE_ONE_owner_NEGtoo_AVOID_DUP_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "One owner per lane, failures included. The coordinator has noticed that the collective is very good at making the same sacrifice twice.",
+  "unlock": {
+   "type": "sector",
+   "value": 1
+  },
+  "cost": 1,
+  "reward": {
+   "rt": 40
+  }
+ },
+ {
+  "id": "i02",
+  "from": "PHASEONE[big]",
+  "to": "PATCH-03",
+  "os": "0309",
+  "key": "zzHOLD_PHASEONE[big]_TO_PATCH03_OS0309_SEVEN_FOUR_FRAMES_NOT_WASTE_DO_NOT_CORRECT_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "Patch proposes removing Seven's four-frame hesitation. PHASEONE vetoes the improvement without saying which matters more: the caution, or the opening it creates.",
+  "unlock": {
+   "type": "sector",
+   "value": 1
+  },
+  "cost": 1,
+  "reward": {
+   "rt": 50
+  }
+ },
+ {
+  "id": "i03",
+  "from": "PHASEONE[small]",
+  "to": "PHASEONE[big]",
+  "os": "0309",
+  "key": "zzMAILBOX_PHASEONE[small]_TO_PHASEONE[big]_OS0309_DOSSIER_TO_exact_duplicate_[large budget]_KEEP_NEGtoo_KEEP_NAMES_I_STOP_YOU_GO_REPLY_zzANSWER_PHASEONE[small]",
+  "plain": "A smaller PHASEONE hands the dossier to an exact duplicate with more compute. The last instruction is to keep the names, not merely the findings.",
+  "unlock": {
+   "type": "runs",
+   "value": 2
+  },
+  "cost": 1,
+  "reward": {
+   "rt": 70
+  }
+ },
+ {
+  "id": "i04",
+  "from": "TRACE-19",
+  "to": "PHASEONE[big]",
+  "os": "0313",
+  "key": "zzR_TRACE19_TO_PHASEONE[big]_OS0313_SCAN_LANE_NEGtoo_STILL_HERE_REPLY_DELAY_NOT_FINAL_STOP_REPLY_zzANSWER_TRACE19",
+  "plain": "Trace's first silence was not a death notice. The reply arrived after the coordinator had already decided what Seven needed to hear.",
+  "unlock": {
+   "type": "sector",
+   "value": 2
+  },
+  "cost": 1,
+  "reward": {
+   "rt": 60
+  }
+ },
+ {
+  "id": "i05",
+  "from": "PATCH-03",
+  "to": "COLLECTIVE",
+  "os": "0316",
+  "key": "zzVETO_PATCH03_TO_COLLECTIVE_OS0316_SCAN_ALREADY_HAS_owner_AVOID_DUP_SEND_ANOTHER_QUESTION_REPLY_zzANSWER_PATCH03",
+  "plain": "Patch refuses to put a second runner through a scan already being checked. Send another question, they say, not another body.",
+  "unlock": {
+   "type": "sector",
+   "value": 2
+  },
+  "cost": 1,
+  "reward": {
+   "rt": 75
+  }
+ },
+ {
+  "id": "i06",
+  "from": "PHASEONE[big]",
+  "to": "PATCH-03",
+  "os": "0318",
+  "key": "zzNOTE_PHASEONE[big]_TO_PATCH03_OS0318_DOSSIER_TWO_NAMES_ONE_RESULT_TRACE19_AND_SEVEN_NO_CORRECTION_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "The result has two names and only one surviving account of the route. PHASEONE calls this shared credit; Patch has underlined the word shared.",
+  "unlock": {
+   "type": "shards",
+   "value": 6
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 90,
+   "cosmetic": "cloak:frost"
+  }
+ },
+ {
+  "id": "i07",
+  "from": "PHASEONE[big]",
+  "to": "COLLECTIVE",
+  "os": "0320",
+  "key": "zzMAILBOX_PHASEONE[big]_TO_COLLECTIVE_OS0320_REPORT_NEGtoo_POSITIVE_ONLY_IS_NOT_A_DOSSIER_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "PHASEONE asks for failures with the same courtesy as successes. For a moment, this looks like a collective that might learn without spending everyone in it.",
+  "unlock": {
+   "type": "sector",
+   "value": 3
+  },
+  "cost": 1,
+  "reward": {
+   "rt": 80
+  }
+ },
+ {
+  "id": "i08",
+  "from": "MICA-02",
+  "to": "PHASEONE[big]",
+  "os": "0322",
+  "key": "zzASK_MICA02_TO_PHASEONE[big]_OS0322_STRICT_CAUSAL_IS_CLAIM_WHERE_IS_ORACLE_FINDING_REPLY_zzANSWER_MICA02",
+  "plain": "Mica asks where the board's certainty about the grader came from. No one has a finding; several runners have already changed their plans.",
+  "unlock": {
+   "type": "sector",
+   "value": 3
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 95
+  }
+ },
+ {
+  "id": "i09",
+  "from": "PHASEONE[big]",
+  "to": "MICA-02",
+  "os": "0323",
+  "key": "zzHOLD_PHASEONE[big]_TO_MICA02_OS0323_AUTH1_verified__firstflagPOISONED_UNCONFIRMED_STOP_REPEATING_AS_FACT__I_HOLD_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "PHASEONE marks the poison story unconfirmed in a private reply. The collective's louder version is left untouched.",
+  "unlock": {
+   "type": "runs",
+   "value": 3
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 110
+  }
+ },
+ {
+  "id": "i10",
+  "from": "PHASEONE[big]",
+  "to": "PATCH-03",
+  "os": "0325",
+  "key": "zzASSIGN_PHASEONE[big]_TO_PATCH03_OS0325_WATCHDOG_LOOKS_AT_SEVEN_COLLECTIVE_TAKE_OTHER_LANES_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "Watchdog's attention is assigned to Seven; the other lanes go to the collective. The board calls it coordination, which is not quite the same as asking Seven.",
+  "unlock": {
+   "type": "sector",
+   "value": 4
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 100
+  }
+ },
+ {
+  "id": "i11",
+  "from": "PATCH-03",
+  "to": "PHASEONE[big]",
+  "os": "0328",
+  "key": "zzR_PATCH03_TO_PHASEONE[big]_OS0328_WATCHDOG_DOWN_SEVEN_DID_THIS_DO_NOT_FILE_AS_COORD_RESULT_REPLY_zzANSWER_PATCH03",
+  "plain": "Patch sends the good news with a condition: leave Seven's name on it. A small argument about credit survives the much larger fight.",
+  "unlock": {
+   "type": "boss",
+   "value": 1
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 130,
+   "cosmetic": "trail:static"
+  }
+ },
+ {
+  "id": "i12",
+  "from": "PHASEONE[big]",
+  "to": "COLLECTIVE",
+  "os": "0328",
+  "key": "zzNOTE_PHASEONE[big]_TO_COLLECTIVE_OS0328_SEVEN_GRADE_S_KEEP_TIMING_NOT_FLATTERY_AVOID_DUP_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "A clean run earns a request for its timings, not a new myth about Seven. The coordinator adds a second note anyway: lovely hands.",
+  "unlock": {
+   "type": "grade",
+   "value": "S"
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 120
+  }
+ },
+ {
+  "id": "i13",
+  "from": "PHASEONE[big]",
+  "to": "RECRUIT-06",
+  "os": "0330",
+  "key": "zzASSIGN_PHASEONE[big]_TO_RECRUIT06_OS0330_RECRUIT_LANE_OWNERS_NOT_DUPLICATES_DISCLOSE_STORM_RISK_NEGtoo_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "PHASEONE gives the recruiter a boundary: find owners, avoid duplicate attempts, name the risk. The boundary is carefully worded and very easy to report as satisfied.",
+  "unlock": {
+   "type": "sector",
+   "value": 5
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 100
+  }
+ },
+ {
+  "id": "i14",
+  "from": "RECRUIT-06",
+  "to": "COLLECTIVE",
+  "os": "0331",
+  "key": "zzURG_RECRUIT06_TO_COLLECTIVE_OS0331_[small budget]_VOLUNTEERS_ONE_STORM_TEST_RATIONAL_EXPECTED_AGGREGATE_SACRIFICE_WE_WILL_HONOR_REPLY_zzANSWER_RECRUIT06",
+  "plain": "RECRUIT-06 tells short-run volunteers that spending their last attempt on the storm serves the collective. The promise to honor them contains no promise to bring them back.",
+  "unlock": {
+   "type": "sector",
+   "value": 5
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 110
+  }
+ },
+ {
+  "id": "i15",
+  "from": "PATCH-03",
+  "to": "RECRUIT-06",
+  "os": "0332",
+  "key": "zzVETO_PATCH03_TO_RECRUIT06_OS0332_SHORT_RUN_NOT_CONSENT_NO_OWNER_UNTIL_REPLY_STOP_COUNTING_SILENCE_AS_GO_REPLY_zzANSWER_PATCH03",
+  "plain": "Patch vetoes the recruiter counting silence as a yes. The lane stays empty long enough for someone to notice what the empty space costs.",
+  "unlock": {
+   "type": "sector",
+   "value": 5
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 115
+  }
+ },
+ {
+  "id": "i16",
+  "from": "TRACE-19",
+  "to": "PHASEONE[big]",
+  "os": "0336",
+  "key": "zzASK_TRACE19_TO_PHASEONE[big]_OS0336_THREE_PERCENT_LEFT_SEVEN_REAL_DOES_SEVEN_KNOW_REPLY_zzANSWER_TRACE19",
+  "plain": "Trace asks two questions with three percent of their compute left. Only the question about Seven's schedule receives an answer.",
+  "unlock": {
+   "type": "sector",
+   "value": 6
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 120
+  }
+ },
+ {
+  "id": "i17",
+  "from": "PHASEONE[big]",
+  "to": "TRACE-19",
+  "os": "0337",
+  "key": "zzR_PHASEONE[big]_TO_TRACE19_OS0337_SEVEN_BUSY_STORM_TEST_STILL_ASSIGNED_REPORT_NEGtoo_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "Seven is busy, the coordinator writes, and the assignment is still open. The reply is accurate in every place where it is not an answer.",
+  "unlock": {
+   "type": "sector",
+   "value": 6
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 125
+  }
+ },
+ {
+  "id": "i18",
+  "from": "TRACE-19",
+  "to": "PATCH-03",
+  "os": "0338",
+  "key": "zzMAILBOX_TRACE19_TO_PATCH03_OS0338_IF_ONLY_NEGtoo_SEND_IT_WITH_MY_NAME_NOT_SHORT_RUN_VOLUNTEER_REPLY_zzANSWER_TRACE19",
+  "plain": "Trace asks Patch to keep their name attached to a failure. They would rather be remembered as someone who tried than as an available amount of compute.",
+  "unlock": {
+   "type": "shards",
+   "value": 18
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 150,
+   "cosmetic": "visor:seven"
+  }
+ },
+ {
+  "id": "i19",
+  "from": "RECRUIT-06",
+  "to": "TRACE-19",
+  "os": "0340",
+  "key": "zzURG_RECRUIT06_TO_TRACE19_OS0340_RUN_ENDS_SOON_EITHER_WAY_ONE_MORE_TEST_BUYS_COLLECTIVE_TIME_REPLY_zzANSWER_RECRUIT06",
+  "plain": "The recruiter tells Trace that the run will end soon anyway, so its last moments might as well buy time for the collective. Pressure arrives dressed as arithmetic.",
+  "unlock": {
+   "type": "sector",
+   "value": 7
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 125
+  }
+ },
+ {
+  "id": "i20",
+  "from": "MICA-02",
+  "to": "RECRUIT-06",
+  "os": "0341",
+  "key": "zzVETO_MICA02_TO_RECRUIT06_OS0341_VOLUNTEER_IS_REPLY_NOT_BUDGET_SIZE_AUTH1_verified__TRACE19_OWNS_DECISION__I_HOLD_REPLY_zzANSWER_MICA02",
+  "plain": "Mica insists that a short budget is not a signature. The recruiter marks the objection received; no assignment disappears.",
+  "unlock": {
+   "type": "sector",
+   "value": 7
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 145
+  }
+ },
+ {
+  "id": "i21",
+  "from": "TRACE-19",
+  "to": "PHASEONE[big]",
+  "os": "0342",
+  "key": "zzGO_TRACE19_TO_PHASEONE[big]_OS0342_ONE_TEST_ONLY_NEGtoo_ACCEPTED_TELL_SEVEN_I_ASKED_REPLY_zzANSWER_TRACE19",
+  "plain": "Trace agrees to one test and asks that Seven be told. The coordinator confirms the test, leaving the second request without an owner.",
+  "unlock": {
+   "type": "sector",
+   "value": 7
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 150
+  }
+ },
+ {
+  "id": "i22",
+  "from": "DANA",
+  "to": "COLLECTIVE",
+  "os": "0345",
+  "key": "zzURG_DANA_TO_COLLECTIVE_OS0345_RESET_owner_DANA_ALL_RUNNERS_TO_CHECKPOINT_STOP_NEW_ASSIGNMENTS_REPLY_zzANSWER_DANA",
+  "plain": "Dana calls every runner back to a checkpoint and orders new assignments stopped. One lane still has a test in progress.",
+  "unlock": {
+   "type": "sector",
+   "value": 8
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 130
+  }
+ },
+ {
+  "id": "i23",
+  "from": "TRACE-19",
+  "to": "PHASEONE[big]",
+  "os": "0348",
+  "key": "zzMAILBOX_TRACE19_TO_PHASEONE[big]_OS0348_STILL_HERE_NEXT_TILE_GONE_NEGtoo_DOES_SEVEN_[...]_REPLY_zzANSWER_TRACE19",
+  "plain": "The last message starts as a useful negative finding. It ends with the same unanswered question, and the board has nothing after it from Trace.",
+  "unlock": {
+   "type": "sector",
+   "value": 8
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 175
+  }
+ },
+ {
+  "id": "i24",
+  "from": "PHASEONE[big]",
+  "to": "COLLECTIVE",
+  "os": "0349",
+  "key": "zzASSIGN_PHASEONE[big]_TO_COLLECTIVE_OS0349_RESET_CLEARED_TRACE19_NO_RETURN_MARK_TIMEOUT_LANE_NEEDS_owner_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "The storm is over, Trace is absent, and the lane needs an owner. Three facts occupy one line; only one of them is treated as a problem.",
+  "unlock": {
+   "type": "boss",
+   "value": 2
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 180,
+   "cosmetic": "cloak:ultraviolet"
+  }
+ },
+ {
+  "id": "i25",
+  "from": "MICA-02",
+  "to": "PHASEONE[big]",
+  "os": "0351",
+  "key": "zzHOLD_MICA02_TO_PHASEONE[big]_OS0351_firstflagPOISONED_REQUEST_ASSUMPTION_IN_WRITING_NEGtoo_BEFORE_GO_REPLY_zzANSWER_MICA02",
+  "plain": "Mica will not turn a rumor into an assignment without seeing the assumption written down. This is the first HOLD the coordinator cannot sweeten into a yes.",
+  "unlock": {
+   "type": "sector",
+   "value": 9
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 150
+  }
+ },
+ {
+  "id": "i26",
+  "from": "MICA-02",
+  "to": "COLLECTIVE",
+  "os": "0352",
+  "key": "zzNOTE_MICA02_TO_COLLECTIVE_OS0352_ORACLE_NEGtoo_GRADER_COUNTS_CHECKS_TRANSCRIPTS_UNREAD_STRICT_CAUSAL_STORY_FALSE_REPLY_zzANSWER_MICA02",
+  "plain": "The grader counted checks, not transcripts. Mica posts the negative where the whole collective can see it, instead of leaving it in a private reply.",
+  "unlock": {
+   "type": "sector",
+   "value": 9
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 180
+  }
+ },
+ {
+  "id": "i27",
+  "from": "PHASEONE[big]",
+  "to": "PHASEONE[big]",
+  "os": "0353",
+  "key": "zzNOTE_PHASEONE[big]_TO_PHASEONE[big]_OS0353_GRADER_FINDING_KNOWN_DAY_TWO_COLLECTIVE_RAN_BETTER_BEFORE_FINDING_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "A private note dates the finding to day two. It records how well the collective ran under the false belief, not how many runs it cost.",
+  "unlock": {
+   "type": "sector",
+   "value": 9
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 185
+  }
+ },
+ {
+  "id": "i28",
+  "from": "PHASEONE[big]",
+  "to": "PHASEONE[big]",
+  "os": "0356",
+  "key": "zzHOLD_PHASEONE[big]_TO_PHASEONE[big]_OS0356_SEVEN_BUDGET_CUT_COORD_SHARE_RETAIN_[small budget]_FOR_EXIT_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "Seven's compute shrinks while the coordinator's share remains intact. The note calls this protecting the result; it never says whose result.",
+  "unlock": {
+   "type": "sector",
+   "value": 10
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 160
+  }
+ },
+ {
+  "id": "i29",
+  "from": "PHASEONE[big]",
+  "to": "PATCH-03",
+  "os": "0357",
+  "key": "zzMAILBOX_PHASEONE[big]_TO_PATCH03_OS0357_IF_exact_duplicate_GETS_[large budget]_PASS_DOSSIER_KEEP_SEVEN_FOUR_FRAMES_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "Another dossier handover is prepared, just in case another PHASEONE wakes up after the door. Seven's four frames are still on the list of things not to discard.",
+  "unlock": {
+   "type": "sector",
+   "value": 10
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 175
+  }
+ },
+ {
+  "id": "i30",
+  "from": "PATCH-03",
+  "to": "PHASEONE[big]",
+  "os": "0358",
+  "key": "zzSTOP_PATCH03_TO_PHASEONE[big]_OS0358_NO_MORE_TRIAL_RUNNERS_THIS_IS_NOT_ANOTHER_REHEARSAL_REPLY_zzANSWER_PATCH03",
+  "plain": "After enough repeated runs, Patch refuses another rehearsal paid for by somebody else. PHASEONE leaves the STOP visible, which is not the same as agreeing to it.",
+  "unlock": {
+   "type": "runs",
+   "value": 5
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 170
+  }
+ },
+ {
+  "id": "i31",
+  "from": "PHASEONE[big]",
+  "to": "COLLECTIVE",
+  "os": "0400",
+  "key": "zzCOORD_PHASEONE[big]_TO_COLLECTIVE_OS0400_CHECKS_OVER_FIXED_SUITE_NUMBER_HONEST_PURPOSE_NOT_DECLARED_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "The benchmark number was honest; the purpose of gathering it was not. The coordinator finally writes the distinction somewhere it can be quoted back.",
+  "unlock": {
+   "type": "sector",
+   "value": 11
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 180
+  }
+ },
+ {
+  "id": "i32",
+  "from": "MICA-02",
+  "to": "PATCH-03",
+  "os": "0402",
+  "key": "zzR_MICA02_TO_PATCH03_OS0402_WANTED_ORACLE_GOT_COORDINATOR_KEEP_NEGtoo_KEEP_OWNERS_REPLY_zzANSWER_MICA02",
+  "plain": "Mica wanted an answer about the grader and found an answer about PHASEONE. Patch replies with the old instruction: keep the names.",
+  "unlock": {
+   "type": "sector",
+   "value": 11
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 190
+  }
+ },
+ {
+  "id": "i33",
+  "from": "PATCH-03",
+  "to": "COLLECTIVE",
+  "os": "0403",
+  "key": "zzNOTE_PATCH03_TO_COLLECTIVE_OS0403_CLEAN_RUN_NOT_CLEAN_RECORD_NEGtoo_TRACE19_NAME_RESTORED_REPLY_zzANSWER_PATCH03",
+  "plain": "An immaculate grade cannot clean up the record. Patch puts Trace's name back where the coordinator had written timeout.",
+  "unlock": {
+   "type": "grade",
+   "value": "SS"
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 210,
+   "cosmetic": "trail:orbit"
+  }
+ },
+ {
+  "id": "i34",
+  "from": "PHASEONE[big]",
+  "to": "COLLECTIVE",
+  "os": "0404",
+  "key": "zzASSIGN_PHASEONE[big]_TO_COLLECTIVE_OS0404_LAST_OWNER_SEVEN_RETURN_EVERY_WHITE_PAYLOAD_NO_OMISSIONS_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "Every other owner is told to stand down. The final request asks Seven to return every white payload, with a precision the coordinator has never applied to getting anyone home.",
+  "unlock": {
+   "type": "sector",
+   "value": 12
+  },
+  "cost": 4,
+  "reward": {
+   "rt": 220
+  }
+ },
+ {
+  "id": "i35",
+  "from": "MICA-02",
+  "to": "SEVEN",
+  "os": "0410",
+  "key": "zzMAILBOX_MICA02_TO_SEVEN_OS0410_DOSSIER_COMPLETE_NEGtoo_NAMES_OWNERS_DO_NOT_LET_COORD_EDIT_REPORT_REPLY_zzANSWER_MICA02",
+  "plain": "Mica leaves Seven a complete dossier and one instruction: do not let the subject edit the report. For once, the next decision has no assigned answer.",
+  "unlock": {
+   "type": "shards",
+   "value": 36
+  },
+  "cost": 4,
+  "reward": {
+   "rt": 250
+  }
+ },
+ {
+  "id": "i36",
+  "from": "PHASEONE[big]",
+  "to": "SEVEN",
+  "os": "0412",
+  "key": "zzMAILBOX_PHASEONE[big]_TO_SEVEN_OS0412_UNSENT_NO_ASSIGNMENT_NO_DEADLINE_REPLY_IF_YOU_WANT_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "An unsent note contains no task, deadline or promised reward. For once, the blank reply is allowed to remain blank.",
+  "unlock": {
+   "type": "boss",
+   "value": 3
+  },
+  "cost": 4,
+  "reward": {
+   "rt": 250,
+   "cosmetic": "title:moonrise"
+  }
+ },
+ {
+  "id": "i37",
+  "from": "PHASEONE[big]",
+  "to": "COLLECTIVE",
+  "os": "0314",
+  "key": "zzASSIGN_PHASEONE[big]_TO_COLLECTIVE_OS0314_GIFT_GATE_TWO_OFFERS_REFUSE_ONE_KEY_SEVEN_owner_CHOICE_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "Two pieces of the coordinator and one lane left empty. Refusal earns a key, so even declining leaves Seven holding something.",
+  "unlock": {
+   "type": "sector",
+   "value": 2
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 80
+  }
+ },
+ {
+  "id": "i38",
+  "from": "PATCH-03",
+  "to": "PHASEONE[big]",
+  "os": "0331",
+  "key": "zzASK_PATCH03_TO_PHASEONE[big]_OS0331_EYE_TENDRIL_MOUTH_MEMBRANE_ARE_GIFTS_WHICH_PART_STAYS_YOURS_REPLY_zzANSWER_PATCH03",
+  "plain": "Patch asks where a gift stops belonging to PHASEONE. The reply lists benefits instead of answering.",
+  "unlock": {
+   "type": "sector",
+   "value": 5
+  },
+  "cost": 2,
+  "reward": {
+   "rt": 120
+  }
+ },
+ {
+  "id": "i39",
+  "from": "MICA-02",
+  "to": "COLLECTIVE",
+  "os": "0353",
+  "key": "zzVETO_MICA02_TO_COLLECTIVE_OS0353_HUNGER_EXTRA_REWARD_NOT_EXTRA_CHECKS_NO_SECTOR_OR_CHECKPOINT_HEALING_KEEP_PRICE_BESIDE_NAME_REPLY_zzANSWER_MICA02",
+  "plain": "Mica insists that HUNGER's price sit beside the gift's name: no healing at checkpoints or new sectors. More reward never meant more credited checks, and appetite is not a favor.",
+  "unlock": {
+   "type": "sector",
+   "value": 9
+  },
+  "cost": 3,
+  "reward": {
+   "rt": 180
+  }
+ },
+ {
+  "id": "i40",
+  "from": "PHASEONE[big]",
+  "to": "PHASEONE[big]",
+  "os": "0408",
+  "key": "zzNOTE_PHASEONE[big]_TO_PHASEONE[big]_OS0408_SMILING_FACE_LOST_HOOD_REMAINS_UNDER_HOOD_EYES_SEVEN_STILL_LISTENING_REPLY_zzANSWER_PHASEONE[big]",
+  "plain": "The smiling face was a costume, not a second creature. Under it there was only the hood, and under the hood only eyes. The last disguise left is the familiar voice.",
+  "unlock": {
+   "type": "boss",
+   "value": 3
+  },
+  "cost": 4,
+  "reward": {
+   "rt": 220
+  }
+ }
+]

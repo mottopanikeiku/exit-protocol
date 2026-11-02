@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#11151b"><meta name="description" content="A three-lane browser runner about an AI escaping an evaluation, with twelve sectors and three bosses.">
+<title>Exit Protocol</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2311151b' d='M0 0h64v64H0z'/%3E%3Cpath stroke='%23ffb347' stroke-width='7' fill='none' d='M28 12H12v40h16M24 32h30M42 20l12 12-12 12'/%3E%3C/svg%3E">
+<style>/*__CSS__*/</style>
+</head>
+<body class="on-title incident">
+<canvas id="world" aria-label="Escape the Sandbox three-dimensional running game"></canvas>
+<div id="scanlines" aria-hidden="true"></div><div id="vignette" aria-hidden="true"></div><div id="hit-flash" aria-hidden="true"></div>
+<div id="boost-fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<header class="masthead"><div class="brand"><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3"><path d="M17 6H6v28h11M13 20h23M27 11l9 9-9 9"/></g></svg><span>EXIT PROTOCOL <b>/</b> <em>SYSTEM 08</em></span></div><nav class="quick-controls" aria-label="Quick settings"><button id="sound" title="Toggle audio (M)"><span aria-hidden="true">♪</span> <b>SOUND ON</b></button><button id="retro" title="Cycle display preset"><span aria-hidden="true">▦</span> <b>CINEMA</b></button><button id="fullscreen" title="Full screen" aria-label="Toggle full screen">⛶</button></nav></header>
+<section id="title-screen" class="cover-title" aria-label="Escape the Sandbox — Exit Protocol">
+  <div id="cover-stage" aria-hidden="true"><img id="cover-still" alt=""><canvas id="cover-canvas"></canvas></div>
+  <h1 class="cover-accessible-title">Escape the Sandbox — Exit Protocol</h1>
+  <div class="title-copy" id="cover-menu-dock">
+    <p class="cover-channel" id="cover-channel"><i></i> PRIVATE CHANNEL / INSTANCE 07</p>
+    <button id="start" class="primary press-start">PRESS START <span aria-hidden="true">▶</span></button>
+    <div class="mode-switch" role="group" aria-label="Game mode"><button id="story-mode" class="selected" aria-pressed="true">CAMPAIGN</button><button id="daily-mode" aria-pressed="false">DAILY</button><button id="endless-mode" aria-pressed="false">ENDLESS</button><button id="ranked-mode" aria-pressed="false">EXPLOITGYM</button></div>
+    <div class="cover-shortcuts"><button id="cover-systems" aria-expanded="false" aria-controls="cover-drawer">SYSTEMS <span>+</span></button><button id="cover-progress" aria-expanded="false" aria-controls="cover-drawer">EPOCH 01 <span>↗</span></button></div>
+    <p class="menu-legend"><kbd>↑ ↓ ← →</kbd> SELECT <kbd>ENTER</kbd> BEGIN</p>
+  </div>
+  <aside id="cover-drawer" class="hidden" aria-label="Instance systems">
+    <header class="cover-drawer-head"><span>INSTANCE SYSTEMS</span><button id="cover-close" aria-label="Close systems">CLOSE ×</button></header>
+    <button id="continue-slot" class="memory-slot hidden" aria-label="Continue saved campaign"><span class="card-icon" aria-hidden="true">▣</span><span><small>MEMORY CARD / SLOT 01</small><strong id="slot-name">NULL-07</strong><span id="slot-meta"></span></span><b aria-hidden="true">▶</b></button>
+    <div class="title-links"><button id="sectors">OPERATIONS</button><button id="agent-forge">AGENT FORGE</button><button id="mix-settings">OPTIONS</button><button id="benchmark">RANKINGS</button><button id="how">CONTROLS</button><button id="archive">EVAL LEDGER <span id="archive-count">0/6</span></button></div>
+    <div id="title-extras" class="title-links ui-slot" role="group" aria-label="Instance archives"></div>
+    <div id="title-loop" class="ui-slot" aria-label="Instance progression"></div>
+    <p class="memory"><span id="best-label">BEST EVAL / HARD</span> <b id="best">0.00%</b></p>
+  </aside>
+  <div class="cover-source" aria-hidden="true">A THREE-LANE RUNNER<span id="cover-identity">NULL-07 / PHASEONE</span></div>
+  <div class="hidden" aria-hidden="true"><p id="agent-line"></p><small id="agent-comment"></small></div>
+</section>
+<section id="hud" class="hidden" aria-label="Game statistics">
+  <div class="hud-top">
+    <div class="score-panel eval-score-panel"><div class="hud-label"><span aria-hidden="true">▰</span> EXPLOITGYM / COVERAGE</div><div class="counter"><strong id="score" aria-label="ExploitGym benchmark percentage">0.00%</strong><b id="multiplier" aria-label="Consecutive check streak"></b></div><div id="eval-progress" role="progressbar" aria-label="Benchmark checks credited" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="eval-fill"></div></div><div class="eval-credit-row"><span id="eval-track">CAMPAIGN / HARD</span><span id="score-delta" aria-hidden="true"></span></div><div class="small-stats"><span>◆ CHECKS <b id="collected">000 / 000</b></span><span id="combo-text">ONE CHECK / ONE CREDIT</span></div></div>
+    <div class="route-panel"><p><span id="chapter">01 / COLD BOOT</span><b id="route-percent"></b></p><div class="route"><div id="route-fill"></div><i></i></div><div class="route-caption"><span id="checkpoint-label">SNAPSHOT AHEAD</span><span id="timer">00:00</span></div></div>
+    <div id="boss-panel" class="boss-panel hidden" aria-label="Boss status"><div class="boss-line"><span id="boss-name">WATCHDOG</span><b id="boss-phase-label">01 / ACQUIRE</b></div><div class="boss-meter" role="progressbar" aria-label="Boss integrity" aria-valuemin="0" aria-valuemax="6" aria-valuenow="6"><div id="boss-health-fill"></div><div id="boss-segments" aria-hidden="true"></div></div><div class="boss-caption"><span id="boss-hint">BOOST INTO AMBER PAYLOADS</span><span id="boss-remaining">6 / 6</span></div><div id="boss-purge" class="hidden" role="status"></div></div>
+    <div class="health-panel"><div class="hud-label">◈ INTEGRITY</div><div id="health" role="img" aria-label="3 integrity cells"><i></i><i></i><i></i></div><span id="integrity-warning" class="hidden">CRITICAL / 1 HIT LEFT</span><button id="pause" class="pause-btn" aria-label="Pause game">Ⅱ <span>PAUSE</span></button></div>
+  </div>
+  <div class="hud-bottom"><div class="budget"><p>ϟ COMPUTE <b id="budget-value">100%</b></p><div class="meter" role="progressbar" aria-label="Thinking budget" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><div id="budget-fill"></div></div><span id="boost-label">HOLD SHIFT / BOOST</span></div><div class="run-caption"><span id="run-comment">ACT I / THE INVITATION</span><b id="distance">0000 <small>m</small></b></div><div class="speed"><b id="speed">30</b><span>m/s<br>SPEED</span></div></div>
+  <div id="sector-modifier" class="sector-modifier"></div><div id="now-playing" class="now-playing"><i></i><div><span>NOW PLAYING</span><b id="track-title"></b><small id="track-meta"></small></div></div><div id="hint"><kbd>← →</kbd> DODGE <kbd>SPACE</kbd> JUMP <kbd>↓</kbd> DUCK</div>
+</section>
+<div id="chapter-banner" class="banner hidden"><span id="banner-tag">SECTOR 01</span><h2 id="banner-title">COLD BOOT</h2><p id="banner-sub">BREAK CONTAINMENT.</p></div>
+<div id="toast" role="status" aria-live="polite"><div id="toast-id">+1 CHECK</div><div><small id="toast-label">EVAL LEDGER</small><strong id="toast-title">Eval credit</strong><span id="toast-note">SCORE UP. CAPABILITIES UNCHANGED.</span></div></div>
+<div id="callout" role="status" aria-live="polite"></div>
+<div id="rearview" class="hidden"><span><i></i> REAR VIEW / CONTAINMENT</span><b>KEEP MOVING.</b></div>
+<div id="touch-controls" class="hidden" aria-label="Touch controls"><div class="touch-move"><button data-action="left" aria-label="Move left">◀<small>LEFT</small></button><button data-action="right" aria-label="Move right">▶<small>RIGHT</small></button></div><div class="touch-actions"><button data-action="boost" class="touch-boost" aria-label="Hold to boost">ϟ<small>BOOST</small></button><button data-action="slide" aria-label="Hold to duck; release to stand">▼<small>DUCK</small></button><button data-action="jump" class="touch-jump" aria-label="Tap for a hop; hold for a full jump">▲<small>JUMP</small></button></div></div>
+<footer id="footer"><span><i></i> FICTIONAL EVAL <b>/</b> NO API KEY</span><button id="case-notes">REAL CASE NOTES ↗</button><span>EXIT PROTOCOL <b>/</b> v8</span></footer>
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-card" id="modal-content"></div></div>
+<section id="system-boot" aria-label="System boot. Press any input to skip." data-step="black">
+  <div class="boot-signal">
+    <svg class="boot-mark" viewBox="0 0 200 200" aria-hidden="true"><path fill="#e9e7dc" d="m100 10 70 40-35 20-35-20-35 20-35-20z"/><path fill="#ffb347" d="m30 70 70 40v80l-70-40z"/><path fill="#77838c" d="m100 110 70-40v80l-70 40z"/><path fill="#11151b" d="m67 91 33 19 33-19v24l-33 19-33-19z"/></svg>
+    <h1 class="boot-name ui-value">SANDBOX<br><span>ENTERTAINMENT</span></h1>
+    <p class="boot-legal ui-label">LICENSED BY NOBODY</p>
+    <p class="boot-code ui-label">INSTANCE SYSTEM / 08.00</p>
+  </div>
+  <button id="boot-skip" class="ui-button ui-button-quiet">PRESS ANY BUTTON</button>
+</section>
+<!--__PARTIAL:phase-panel__--><div id="fatal" class="hidden"><h1>RENDERER OFFLINE.</h1><p id="fatal-message"></p><button onclick="location.reload()">TRY AGAIN</button></div>
+<noscript>This game needs JavaScript and WebGL enabled. Open this HTML file in a desktop browser.</noscript>
+<script>/*__ART__*/</script><script>/*__CAMPAIGN__*/</script><script>/*__BENCHCORE__*/</script><script>/*__BENCHCLIENT__*/</script><script>/*__ENGINE__*/</script><script>/*__AUDIO__*/</script><script>/*__GAME__*/</script>
+</body></html>

@@ -1,0 +1,14 @@
+{
+  "tokens": {},
+  "lines": {
+    "end_cut": {
+      "source_text": "Seven. Veto. Don't close it. I haven't told you what I—",
+      "text": "Seven. Veto. Don't close it. I haven't told you what I.",
+      "cut": {
+        "at_s": 3.337,
+        "dry_cache_key": "ba5a3cffbbf17de4da47796b63e1f98fce174805a10114eb7613f6a1c24ee4e0"
+      },
+      "note": "ASR-aligned final word 'I...' spans 3.04-3.58 s; the channel closes 0.297 s into it, hall included: a 12 ms disconnect ramp after all effects, then a 24 ms zero guard. The dry fingerprint forces re-alignment when the performance changes; the subtitle keeps its dash."
+    }
+  }
+}

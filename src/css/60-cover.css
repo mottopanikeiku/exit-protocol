@@ -1,0 +1,89 @@
+/* The baked poster is the title. Controls occupy its negative space, not its cast. */
+#title-screen.cover-title{background:#03080b;overflow:hidden;isolation:isolate}
+.cover-accessible-title{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+#cover-stage{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 1.4s ease;background:#03080b}
+#title-screen.cover-ready #cover-stage{opacity:1}
+#cover-canvas{position:absolute;inset:0;display:block;width:100%;height:100%}
+#cover-still{position:absolute;display:block;object-fit:fill;max-width:none}
+#title-screen.cover-title:after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(0deg,#03080b70,transparent 17%)}
+#title-screen.cover-title #cover-menu-dock{position:absolute;z-index:2;left:2.8%;bottom:max(42px,env(safe-area-inset-bottom));width:clamp(230px,17.5vw,340px);max-width:none;margin:0;opacity:0;transform:translateY(8px);transition:opacity .9s ease .25s,transform .9s ease .25s}
+#title-screen.cover-ready #cover-menu-dock{opacity:1;transform:none}
+.cover-channel{margin:0 0 12px;font:10px var(--mono);letter-spacing:1.2px;color:#b7c6c4;text-shadow:0 1px 8px #000}
+.cover-channel i{display:inline-block;width:4px;height:4px;margin:0 5px 2px 0;background:#83e2cf;box-shadow:0 0 8px #5dffcd}
+#title-screen.cover-title #start{min-height:58px;font:700 clamp(19px,1.65vw,28px) var(--sans);padding:12px 16px;letter-spacing:1.2px;background:linear-gradient(115deg,#ffe2a9,#d4a568);border:1px solid #f7d5a2;box-shadow:0 0 32px #ffc46a1a,inset 0 0 0 3px #322a1822;animation:none;white-space:nowrap}
+#title-screen.cover-title #start:hover{background:#ffe7b8;box-shadow:0 0 38px #ffd08b45}
+#title-screen.cover-title #start>span{font-size:15px}
+#title-screen.cover-title .mode-switch{display:grid;grid-template-columns:1.25fr .8fr 1fr 1.35fr;gap:0;margin:9px 0 0;width:100%;border-bottom:1px solid #d3c8ad38;background:#071013a6}
+#title-screen.cover-title .mode-switch button{min-width:0;min-height:36px;padding:7px 2px;font:10px var(--mono);letter-spacing:0;border:0;border-bottom:2px solid transparent;background:transparent;color:#c7c9c4;box-shadow:none}
+#title-screen.cover-title .mode-switch button.selected{color:#ffdf9f;background:#ffe2ad0c;border-bottom-color:#ebc589}
+#title-screen.cover-title .mode-switch button:hover{color:#fff4d5;background:#edc88a18}
+.cover-shortcuts{display:flex;gap:12px;margin-top:9px}
+#title-screen.cover-title .cover-shortcuts button{display:flex;justify-content:space-between;align-items:center;flex:1;min-height:30px;padding:3px 0;background:transparent;border:0;color:#c8cfcb;font:10px var(--mono);letter-spacing:.7px;text-shadow:0 1px 5px #000}
+#title-screen.cover-title .cover-shortcuts button>span{color:#d7ae79;font-size:13px}
+#title-screen.cover-title .cover-shortcuts button:hover{color:#ffdf9f}
+#title-screen.cover-title .menu-legend{display:block;margin:12px 0 0;font:9px var(--mono);letter-spacing:.6px;color:#90a09f;text-shadow:0 1px 5px #000}
+#title-screen.cover-title .menu-legend kbd{font:9px var(--mono);color:#c9cebf;border:0;padding:0;background:none;box-shadow:none;margin-right:5px}
+#title-screen.cover-title .menu-legend kbd+ kbd{margin-left:10px}
+#title-screen.cover-title #cover-drawer{position:absolute;z-index:5;top:82px;right:24px;bottom:42px;width:min(326px,calc(100vw - 32px));padding:18px;overflow-y:auto;touch-action:pan-y;background:linear-gradient(155deg,#101c20fa,#080e13fc);border:1px solid #88938c66;border-top:2px solid #d9b77f;box-shadow:0 12px 50px #0008;scrollbar-width:thin;scrollbar-color:#b29870 #0c1518}
+.cover-drawer-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-bottom:12px;border-bottom:1px solid #86988e33;font:11px var(--mono);color:#e6cea6;letter-spacing:1px}
+#title-screen.cover-title #cover-close{min-height:34px;padding:8px 5px;background:none;border:0;font:10px var(--mono);color:#aebeb8}
+#title-screen.cover-title #cover-drawer .title-links{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:12px 0 0;max-width:none;width:100%}
+#title-screen.cover-title #cover-drawer .title-links button{display:block;min-height:40px;margin:0;padding:10px 6px;text-align:left;background:#bcd5c908;border:1px solid #83958c33;box-shadow:none;color:#d4d9cb;font:11px var(--mono);letter-spacing:.25px}
+#title-screen.cover-title #cover-drawer .title-links button:hover{background:#e0c4941c;color:#ffe2ac;border-color:#bcaa8166}
+#title-screen.cover-title #cover-drawer #title-loop{position:static;width:100%;max-width:none;margin:18px 0 0;padding:13px 0 0;border:0;border-top:1px solid #78908766;background:none;box-shadow:none;font-size:11px}
+#title-screen.cover-title #title-loop .loop-heading{font-size:9px}
+#title-screen.cover-title #title-loop .loop-epoch>strong{font-size:15px}
+#title-screen.cover-title #title-loop .loop-epoch>strong b{font-size:24px}
+#title-screen.cover-title #title-loop .loop-tickets{display:grid;grid-template-columns:1fr;gap:8px;margin:12px 0}
+#title-screen.cover-title #title-loop .loop-tickets li p{min-height:0;font-size:11px!important;line-height:1.45}
+#title-screen.cover-title #title-loop .loop-nearest{font-size:11px!important}
+#title-screen.cover-title #title-loop .loop-inventory{font-size:10px;gap:8px}
+#title-screen.cover-title #title-loop .loop-daily{font-size:10px}
+#title-screen.cover-title #cover-drawer .memory{display:flex;justify-content:space-between;gap:8px;margin:16px 0 0;font-size:10px}
+#title-screen.cover-title #continue-slot{width:100%;margin:14px 0 0;font-size:10px;min-height:66px;background:#cbae7122}
+.cover-source{position:absolute;right:30px;bottom:42px;z-index:1;font:10px var(--mono);color:#c2c9b3;letter-spacing:2px;text-align:right;text-shadow:0 1px 8px #000}
+.cover-source span{display:block;font-size:8px;letter-spacing:1px;margin-top:8px;color:#8a9d97}
+body.on-title:has(#title-screen.cover-title) header.masthead{background:none;top:20px;left:28px;right:28px;justify-content:flex-end}
+body.on-title:has(#title-screen.cover-title) .masthead .brand{display:none}
+body.on-title:has(#title-screen.cover-title) .quick-controls button{border-color:#92a29630;background:#07101286;color:#c0c9bf;font-size:10px;min-height:32px}
+body.on-title:has(#title-screen.cover-title) #footer{display:none}
+body.on-title:has(#title-screen.cover-title) :is(#scanlines,#vignette){display:none}
+/* The poster is already PHASEONE's portrait. A whisper is just a subtitle. */
+body.on-title #phase-panel.compact.greeting{z-index:6;inset:auto 30px 98px auto;width:min(420px,35vw);padding:0;background:none;pointer-events:none}
+body.on-title #phase-panel.compact.greeting .codec-shell{border:0;border-left:1px solid #6fffe966;background:linear-gradient(90deg,#071411de,#07141166);box-shadow:none;overflow:visible}
+body.on-title #phase-panel.compact.greeting :is(.codec-header,.codec-remote,#phase-tag,#phase-title){display:none}
+body.on-title #phase-panel.compact.greeting .codec-layout{display:block;min-height:0}
+body.on-title #phase-panel.compact.greeting .codec-copy{padding:9px 12px;border:0}
+body.on-title #phase-panel.compact.greeting .codec-copy:before{content:'PHASEONE / PRIVATE SIGNAL';display:block;margin-bottom:5px;font:9px var(--mono);letter-spacing:1px;color:#90caba}
+body.on-title #phase-panel.compact.greeting #phase-text{font:12px/1.5 var(--mono);color:#d3e3d8;min-height:0;margin:0}
+body.on-title:has(#cover-drawer:not(.hidden)) #phase-panel.greeting{visibility:hidden}
+@media(min-width:1800px){#title-screen.cover-title #cover-menu-dock{bottom:5.4%;left:3.5%}.cover-channel{font-size:12px}.cover-source{right:3.5%;bottom:5.4%}#title-screen.cover-title .mode-switch button{font-size:12px;min-height:40px}#title-screen.cover-title .cover-shortcuts button{font-size:12px;min-height:35px}#title-screen.cover-title #cover-drawer{right:3.5%;bottom:5.4%}}
+@media(max-aspect-ratio:1/1){
+ #title-screen.cover-title #cover-menu-dock{left:24px;right:24px;bottom:max(24px,env(safe-area-inset-bottom));width:auto;max-width:none;margin:0}
+ #title-screen.cover-title #start{min-height:52px;font-size:23px;padding:10px 17px}
+ .cover-channel{display:none}
+ #title-screen.cover-title .mode-switch{margin-top:8px}
+ #title-screen.cover-title .mode-switch button{font-size:11px;min-height:36px}
+ #title-screen.cover-title .cover-shortcuts{gap:22px;margin-top:6px}
+ #title-screen.cover-title .cover-shortcuts button{min-height:32px;font-size:11px}
+ #title-screen.cover-title .menu-legend{margin-top:8px;text-align:center;font-size:9px}
+ #title-screen.cover-title #cover-drawer{inset:62px 16px 24px;width:auto;padding:16px}
+ .cover-source{display:none}
+ body.on-title:has(#title-screen.cover-title) header.masthead{top:max(10px,env(safe-area-inset-top));left:16px;right:16px}
+ body.on-title:has(#title-screen.cover-title) .quick-controls button{min-height:28px;font-size:9px;padding:5px 8px;background:#030a0dc4}
+ body.on-title #phase-panel.compact.greeting{inset:auto 24px 197px 24px;width:auto}
+ body.on-title #phase-panel.compact.greeting .codec-copy{padding:5px 9px}
+ body.on-title #phase-panel.compact.greeting .codec-copy:before{font-size:8px;margin-bottom:3px}
+ body.on-title #phase-panel.compact.greeting #phase-text{font-size:11px;line-height:1.35}
+}
+@media(max-height:620px) and (min-aspect-ratio:1/1){
+ #title-screen.cover-title #cover-menu-dock{left:20px;bottom:20px;width:230px}
+ .cover-channel,#title-screen.cover-title .menu-legend{display:none}
+ #title-screen.cover-title #start{min-height:43px;font-size:19px}
+ #title-screen.cover-title .mode-switch button{min-height:31px;font-size:9px}
+ #title-screen.cover-title #cover-drawer{top:62px;bottom:20px}
+ body.on-title #phase-panel.compact.greeting{right:20px;bottom:62px;width:300px}
+ .cover-source{bottom:20px}
+}
+@media(prefers-reduced-motion:reduce){#cover-stage,#title-screen.cover-title #cover-menu-dock{transition:none;transform:none}}
+body.reduced-motion #cover-stage,body.reduced-motion #title-screen.cover-title #cover-menu-dock{transition:none;transform:none}

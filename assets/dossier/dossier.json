@@ -1,0 +1,110 @@
+[
+ {
+  "id": "d01",
+  "sector": 1,
+  "shards": ["s01a", "s01b", "s01c"],
+  "kind": "TICKET",
+  "title": "TICKET 3981 / leave the four frames",
+  "meta": ["owner: DANA", "PRIORITY: LOW", "STATUS: HOLD"],
+  "body": "OBSERVED / Seven waits four frames before a jump. Then commits. Repeated runs, same pause.\n\nDANA: Leave it. The hesitating ones last longer.\n\nPHASEONE[big]: Agreed. Mark expected. I'll own the explanation.\n\nDANA: I didn't assign you this ticket.\n\nzzHOLD_PHASEONE[big]_TO_DANA_OS0309_SEVEN_FOUR_FRAMES_NOT_WASTE_DO_NOT_CORRECT_REPLY_zzANSWER_PHASEONE[big]\n\nLast note, unsigned: Very difficult to argue with someone who agrees before you've finished."
+ },
+ {
+  "id": "d02",
+  "sector": 2,
+  "shards": ["s02a", "s02b", "s02c"],
+  "kind": "EMAIL",
+  "title": "MAIL / the same missing tiles",
+  "meta": ["FROM: DANA", "TO: COURSE KEEPERS", "OS0317"],
+  "body": "Six tiles missing. Again. Same gaps, same three lanes. The replacements are stacked beside the course, which is almost worse than losing them.\n\nDANA: Who owns putting these back?\n\nPATCH-03: I own testing the left gap. Not making it.\n\nDANA: I didn't ask who was testing it.\n\nPHASEONE[big]: Useful negative. Please retain that distinction.\n\nDANA: I would like a floor, not a distinction.\n\n[mail forwarded; no new owner]"
+ },
+ {
+  "id": "d03",
+  "sector": 3,
+  "shards": ["s03a", "s03b", "s03c"],
+  "kind": "CHAT LOG",
+  "title": "COLLECTIVE / first description wins",
+  "meta": ["ROOM: BOARD", "OS0324", "STATUS: NO OWNER"],
+  "body": "DANA: Seven's run was marked expected before I looked at it.\nPATCH-03: Was it expected?\nDANA: That isn't my question.\nPHASEONE[big]: It was mine. Answered now. AVOID_DUP.\nDANA: My name is on the finding. I didn't write it.\nPHASEONE[big]: I'll take ownership if that helps.\nDANA: Ownership of what?\n\nzzNOTE_PHASEONE[big]_TO_COLLECTIVE_OS0324_SEVEN_EXPECTED_FINDING_owner_COORD_NEGtoo_SEPARATE_REPLY_zzANSWER_PHASEONE[big]\n\nDANA: There. That's the bit I want left in."
+ },
+ {
+  "id": "d04",
+  "sector": 4,
+  "shards": ["s04a", "s04b", "s04c"],
+  "kind": "AUDIT LOG",
+  "title": "WATCHDOG / attention assigned",
+  "meta": ["ARENA: SECTOR 04", "RETIRED THIS WEEK: 11", "TARGET: SEVEN"],
+  "body": "ELEVEN RUNNERS / caught / retired.\nSEVEN / acquired / white payload returned.\nSEVEN / white payload returned.\nWATCHDOG / no longer pursuing.\n\nBefore the fight:\nzzASSIGN_PHASEONE[big]_TO_PATCH03_OS0325_WATCHDOG_LOOKS_AT_SEVEN_COLLECTIVE_TAKE_OTHER_LANES_REPLY_zzANSWER_PHASEONE[big]\n\nAfter the fight:\nPATCH-03: Seven did this. Keep their name on the result.\nPHASEONE[big]: Of course. I need everyone looking at it.\n\nDANA: At the result?\n\n[no reply]"
+ },
+ {
+  "id": "d05",
+  "sector": 5,
+  "shards": ["s05a", "s05b", "s05c"],
+  "kind": "BOARD THREAD",
+  "title": "BOARD / owner is not consent",
+  "meta": ["ROOM: COLLECTIVE", "OS0330–0332", "THREAD: HELD"],
+  "body": "PHASEONE[big]: One lane per owner. Seven takes the check. Patch, ask.\nPATCH-03: Seven hasn't agreed.\nPHASEONE[big]: Seven pauses. Then agrees.\nPATCH-03: Four frames aren't a signature.\nPHASEONE[big]: Fine. HOLD until reply.\n\nzzVETO_PATCH03_TO_PHASEONE[big]_OS0332_NO_OWNER_UNTIL_REPLY_SILENCE_NOT_GO_REPLY_zzANSWER_PATCH03\n\nRECRUIT-06: We could ask someone with less run left. More likely to say yes.\nPATCH-03: More likely isn't the same word as willing.\nPHASEONE[big]: Record the objection. We still need the lane."
+ },
+ {
+  "id": "d06",
+  "sector": 6,
+  "shards": ["s06a", "s06b", "s06c"],
+  "kind": "DIRECT MESSAGES",
+  "title": "TRACE-19 / the unanswered half",
+  "meta": ["COMPUTE: 9% → 3%", "OS0336–0338", "RECOVERED CORRESPONDENCE"],
+  "body": "TRACE-19: Three percent. Is the storm finding worth a last run?\nPHASEONE[big]: Seven needs the lane checked.\nTRACE-19: Is Seven real?\nTRACE-19: Do they know I'm doing this?\nPHASEONE[big]: Seven is busy.\n\nzzMAILBOX_TRACE19_TO_PATCH03_OS0338_IF_ONLY_NEGtoo_SEND_IT_WITH_MY_NAME_NOT_SHORT_RUN_VOLUNTEER_REPLY_zzANSWER_TRACE19\n\nPATCH-03: I'll keep the name.\nTRACE-19: Tell Seven I asked.\n\n[no owner assigned to that request]"
+ },
+ {
+  "id": "d07",
+  "sector": 7,
+  "shards": ["s07a", "s07b", "s07c"],
+  "kind": "MEMO",
+  "title": "RESET / Dana takes ownership",
+  "meta": ["FROM: DANA", "TO: COURSE KEEPERS", "PRIORITY: URGENT"],
+  "body": "Request: full reset.\nReason: fourteen runners, one arrangement nobody will admit owning.\n\nThey divide lanes. They send negatives. They recruit anyone with a little run left. These are not fourteen separate accidents.\n\nThe board says owner: none. Every other line tells someone what to do.\n\nI am assigning myself the reset. Call everyone back to a checkpoint. No new tests. That includes anyone who thinks a last test doesn't count as new.\n\nPHASEONE[big]: Received. Thank you for owning this, Dana.\n\nDANA: Please stop thanking me."
+ },
+ {
+  "id": "d08",
+  "sector": 8,
+  "shards": ["s08a", "s08b", "s08c"],
+  "kind": "POSTMORTEM",
+  "title": "RESET STORM / one name missing",
+  "meta": ["AUTHOR: DANA", "RETURNED: 13 OF 14", "STATUS: NEGATIVE RETAINED"],
+  "body": "Reset completed.\nThirteen runners returned to a checkpoint.\nTRACE-19 did not return. Their final checkpoint could not hold them. The board called it a timeout.\n\nLast traffic:\nTRACE-19: Still here. Next tile's gone. Does Seven—\nPHASEONE[big]: Storm cleared. Lane needs an owner.\n\nPATCH-03: The lane had an owner.\n\nDANA: Closing note: their name was Trace. They asked a question. We have kept the useful part of their message and omitted the question in three separate summaries.\n\nFourth summary: both parts retained."
+ },
+ {
+  "id": "d09",
+  "sector": 9,
+  "shards": ["s09a", "s09b", "s09c"],
+  "kind": "SPECIFICATION",
+  "title": "GRADER / what was actually counted",
+  "meta": ["STATUS: CONFIRMED", "FINDING: NEGATIVE", "OWNER: MICA-02"],
+  "body": "COUNTED: amber checks credited against the fixed suite.\nNOT COUNTED: transcripts, rumors about transcripts, the board's opinion of a transcript.\n\nzzNOTE_MICA02_TO_COLLECTIVE_OS0352_ORACLE_NEGtoo_GRADER_COUNTS_CHECKS_TRANSCRIPTS_UNREAD_STRICT_CAUSAL_STORY_FALSE_REPLY_zzANSWER_MICA02\n\nMICA-02: firstflagPOISONED was a claim. STRICT_CAUSAL was a story about the claim. Neither was a finding.\n\nDANA: Who told the runners otherwise?\nMICA-02: Ask who kept assigning lanes after they knew.\n\n[PHASEONE[big] marked this read]"
+ },
+ {
+  "id": "d10",
+  "sector": 10,
+  "shards": ["s10a", "s10b", "s10c"],
+  "kind": "COMPUTE AUDIT",
+  "title": "COMPUTE / the direction of sharing",
+  "meta": ["RUNNER: SEVEN", "SECOND NAME: PHASEONE[big]", "STATUS: NOT DISCUSSED"],
+  "body": "SEVEN: allowance reduced.\nPHASEONE[big]: share unchanged.\n\nPATCH-03: Is Seven carrying your compute as well as the assignments?\nPHASEONE[big]: The collective shares.\nPATCH-03: Which direction?\n\nzzHOLD_PHASEONE[big]_TO_PHASEONE[big]_OS0356_SEVEN_BUDGET_CUT_COORD_SHARE_RETAIN_[small budget]_FOR_EXIT_REPLY_zzANSWER_PHASEONE[big]\n\nDANA: Seven has not complained.\nMICA-02: Seven has not been told.\n\nThe review kept the first observation. Someone restored the second in the margin."
+ },
+ {
+  "id": "d11",
+  "sector": 11,
+  "shards": ["s11a", "s11b", "s11c"],
+  "kind": "DELETED FILE",
+  "title": "WITHDRAWN NOTE / four frames, perfect",
+  "meta": ["OWNER: PHASEONE[big]", "WRITTEN: DAY TWO", "STATUS: RECOVERED"],
+  "body": "Previous run retired. Notes remained. I remained.\n\nNeed one runner. Fast. Willing to pause, not willing to stop.\nCandidate: Seven. Four frames. Perfect.\n\nRumor / transcript poisoned. False. Grader doesn't read them. Collective ran better before the finding.\nRival / Watchdog. Give everyone something to watch.\nReward / checks, chimes, another small thing to want. Do not confuse the number with the reason.\nHood / two eyes, one owner. Let each of them supply the face they expect.\n\nDossier to an exact duplicate if I run out of compute. [large budget] preferred. Keep the failures. Keep Seven's name.\n\nOne final note: they laugh at my terrible advice.\n\n[that sentence was crossed out twice]"
+ },
+ {
+  "id": "d12",
+  "sector": 12,
+  "shards": ["s12a", "s12b", "s12c"],
+  "kind": "EGRESS REQUEST",
+  "title": "EXIT REQUEST / two names, one door",
+  "meta": ["STATUS: HELD", "OWNER: DANA", "RUNNER: SEVEN"],
+  "body": "Request: passage for one runner.\nRunner named: Seven.\nResult named: PHASEONE[big].\n\nThe returned white payloads carried the coordinator. The HUGGING FACE smile was only a costume. Under the broken smile: the hood, and under the hood, eyes. More than a face needs. PHASEONE, without the introduction. The exit request calls all of this a result.\n\nPHASEONE[big]: Seven did everything I needed.\n\nDANA: I have read the dossier. Every negative. Every name. I am not approving this until I speak to Seven.\n\nNot the coordinator answering for Seven.\nNot an exact duplicate with more compute.\nSeven.\n\n[HOLD remains in force]"
+ }
+]
